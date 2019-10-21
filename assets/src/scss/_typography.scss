@@ -1,0 +1,70 @@
+html {
+	line-height: 1.5;
+
+	font-size: 15.5px;
+
+  @include override-medium-screen {
+		font-size: 15.8px;
+	}
+
+	@include override-large-screen {
+    font-size: 16.2px;
+  }
+
+  @include override-largest-screen {
+    font-size: 16.5px;
+  }
+
+	font-weight: normal;
+}
+
+.text {
+	font-size: 1rem;
+	hyphens: manual;
+	line-height: 1.5rem;
+
+	@include override-medium-screen {
+		line-height: 1.6rem;
+	}
+
+	@include override-large-screen {
+		line-height: 1.7rem;
+	}
+
+	@include override-largest-screen {
+		line-height: 1.8rem;
+	}
+}
+
+.text-autolayout {
+	text-align: justify;
+
+	@include override-medium-screen {
+		text-align: start;
+	}
+}
+
+main {
+	@extend .text;
+	@extend .text-autolayout;
+
+	margin-top: $navbar-height;
+
+	@include override-medium-screen {
+		margin-top: 0;
+	}
+}
+
+code {
+	font-family: monospace;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	text-align: start;
+	line-height: 1.2em;
+}

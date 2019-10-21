@@ -1,0 +1,11 @@
+@function light($color) {
+	@return nth($color, 1);
+}
+
+@function dark($color) {
+	@return nth($color, 2);
+}
+
+@function darkest($color) {
+	@return nth($color, 3);
+}

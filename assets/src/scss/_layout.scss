@@ -1,0 +1,44 @@
+.content {
+	margin: 0 auto;
+	padding: 0 0;
+	width: 95%;
+
+	@include override-medium-screen {
+		width: 85%;
+	}
+
+	@include override-large-screen {
+		width: 77%;
+	}
+
+	@include override-largest-screen {
+		width: 70%;
+	}
+}
+
+main {
+	@extend .content;
+	@include clearfix;
+}
+
+footer {
+	width: 100%;
+	margin: 0 0;
+	padding: 0 2.5%;
+
+	@include override-medium-screen {
+		padding: 0 7.5%;
+	}
+
+	@include override-large-screen {
+		padding: 0 11.5%;
+	}
+
+	@include override-largest-screen {
+		padding: 0 15%;
+	}
+}
+
+.clearfix {
+	@include clearfix;
+}

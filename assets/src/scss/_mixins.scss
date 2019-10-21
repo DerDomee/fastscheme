@@ -1,0 +1,65 @@
+@mixin hide-medium-and-up {
+	@media screen and (min-width: $breakpoint-small) {
+		display: none;
+	}
+}
+
+@mixin hide-large-and-up {
+	@media screen and (min-width: $breakpoint-medium) {
+		display: none;
+	}
+}
+
+@mixin hide-largest {
+	@media screen and (min-width: $breakpoint-large) {
+		display: none;
+	}
+}
+
+@mixin hide-large-and-down {
+	@media screen and (max-width: $breakpoint-large - 1px) {
+		display: none;
+	}
+}
+
+@mixin hide-medium-and-down {
+	@media screen and (max-width: $breakpoint-medium - 1px) {
+		display: none;
+	}
+}
+
+@mixin hide-small {
+	@media screen and (max-width: $breakpoint-small - 1px) {
+		display: none;
+	}
+}
+
+@mixin override-medium-screen {
+	@media screen and (min-width: $breakpoint-small) {
+		@content;
+	}
+}
+
+@mixin override-large-screen {
+	@media screen and (min-width: $breakpoint-medium) {
+		@content;
+	}
+}
+
+@mixin override-largest-screen {
+	@media screen and (min-width: $breakpoint-large) {
+		@content;
+	}
+}
+
+@mixin clearfix {
+	&::before,
+	&::after {
+		content: " ";
+		display: table;
+	}
+
+	&:after {
+		clear: both;
+	}
+}
