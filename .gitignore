@@ -1,6 +1,7 @@
 # Ignore node-generated folders and dependencies
 /node_modules/
 /src/js/coverage/
+/dist/
 
 # OS or Editor folders
 ._*
