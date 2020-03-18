@@ -13,7 +13,6 @@ nav {
 	@include colorselect(border-bottom, $c-nav-border, "1px solid");
 
 	.nav-content {
-		@extend .content;
 		display: flex;
 		flex-direction: row;
 		box-sizing: content-box;

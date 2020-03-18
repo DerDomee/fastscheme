@@ -1,4 +1,4 @@
-.content {
+.container {
 	margin: 0 auto;
 	padding: 0 0;
 	width: 95%;
@@ -17,7 +17,6 @@
 }
 
 main {
-	@extend .content;
 	@include clearfix;
 }
 
