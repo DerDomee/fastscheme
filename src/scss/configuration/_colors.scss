@@ -14,13 +14,13 @@ $color-03: rgba(230, 126,  34, 1);		// Warning Color
 $color-04: rgba(192,  57,  43, 1);		// Error Color
 
 
-  //   Color usage matrix:         LIGHT THEME:             DARK THEME:              DARKEST THEME:                   COLOR DESCRIPTION:
-       $c-body-background:         $white-00,               $black-01,               $black-00;                    // Common Background-Color for the whole document
+//     Color usage matrix:         LIGHT THEME:             DARK THEME:              DARKEST THEME:                   COLOR DESCRIPTION:
+       $c-body-background:         $white-00,               $black-02,               $black-00;                    // Common Background-Color for the whole document
              $c-body-text:         $black-01,               $white-01,               $white-00;                    // Common Text-Color for the whole document
 
-        $c-nav-background:         $white-01,               $black-03,               $color-01;                    // Background-Color for Navigation Bar
+        $c-nav-background:         $white-01,               $white-03,               $color-01;                    // Background-Color for Navigation Bar
               $c-nav-text:         $black-01,               $white-01,               $white-00;                    // Common Text-Color for Navigation Bar
-            $c-nav-border:         $white-02,               $white-03,        darken($color-01, 10%);              // Color of the bottom border of the Navigation Bar
+            $c-nav-border:         $white-02,               $black-01,        darken($color-01, 10%);              // Color of the bottom border of the Navigation Bar
       $c-navitem-hover-bg:         $color-01,               $color-01,        darken($color-01, 10%);              // Background-Color for hovererd/focused Navigation-Items
      $c-navitem-active-bg:  darken($color-01, 10%),  darken($color-01, 10%),  darken($color-01, 20%);              // Background-Color on active Navigation-Items
      $c-navitem-hovact-bg:  darken($color-01, 20%),  darken($color-01, 20%),  darken($color-01, 30%);              // Background-Color on active AND hovered/focused Navigation-Items
