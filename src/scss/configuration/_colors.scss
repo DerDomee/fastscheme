@@ -2,7 +2,9 @@
 $white-00: rgba(255, 255, 255, 1);
 $white-01: rgba(240, 240, 240, 1);
 $white-02: rgba(190, 190, 190, 1);
-$white-03: rgba( 65,  65,  65, 1);
+$white-03: rgba(150, 150, 150, 1);
+$white-04: rgba(100, 100, 100, 1);
+$black-04: rgba( 65,  65,  65, 1);
 $black-03: rgba( 35,  35,  35, 1);
 $black-02: rgba( 20,  20,  20, 1);
 $black-01: rgba(  8,   8,   8, 1);
@@ -18,9 +20,9 @@ $color-04: rgba(192,  57,  43, 1);		// Error Color
        $c-body-background:         $white-00,               $black-02,               $black-00;                    // Common Background-Color for the whole document
              $c-body-text:         $black-01,               $white-01,               $white-00;                    // Common Text-Color for the whole document
 
-        $c-nav-background:         $white-01,               $white-03,               $color-01;                    // Background-Color for Navigation Bar
+        $c-nav-background:         $white-01,               $black-04,               $color-01;                    // Background-Color for Navigation Bar
               $c-nav-text:         $black-01,               $white-01,               $white-00;                    // Common Text-Color for Navigation Bar
-            $c-nav-border:         $white-02,               $black-01,        darken($color-01, 10%);              // Color of the bottom border of the Navigation Bar
+            $c-nav-border:         $white-02,               $white-02,        darken($color-01, 10%);              // Color of the bottom border of the Navigation Bar
       $c-navitem-hover-bg:         $color-01,               $color-01,        darken($color-01, 10%);              // Background-Color for hovererd/focused Navigation-Items
      $c-navitem-active-bg:  darken($color-01, 10%),  darken($color-01, 10%),  darken($color-01, 20%);              // Background-Color on active Navigation-Items
      $c-navitem-hovact-bg:  darken($color-01, 20%),  darken($color-01, 20%),  darken($color-01, 30%);              // Background-Color on active AND hovered/focused Navigation-Items
