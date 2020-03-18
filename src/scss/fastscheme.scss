@@ -1,10 +1,8 @@
-@import 'variables';
-
+@import 'configuration/variables';
+@import 'configuration/colors';
 
 @import 'functions';
 @import 'mixins';
-
-@import 'colors';
 
 @import 'global';
 @import 'layout';
