@@ -1,18 +1,18 @@
 html {
-	line-height: 1.5;
+	line-height: $font-line-height;
 
-	font-size: 15.5px;
+	font-size: $font-size-small;
 
   @include override-medium-screen {
-		font-size: 15.8px;
+		font-size: $font-size-medium;
 	}
 
 	@include override-large-screen {
-    font-size: 16.2px;
+    font-size: $font-size-large;
   }
 
   @include override-largest-screen {
-    font-size: 16.5px;
+    font-size: $font-size-largest;
   }
 
 	font-weight: normal;
