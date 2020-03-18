@@ -1,0 +1,17 @@
+button,
+a.button,
+div.button {
+  background-color: red;
+  border: 1px solid darken(red,40%);
+  border-radius: 5px;
+  cursor: pointer;
+  @include colorselect(color, $c-body-text);
+  padding: 3px;
+  text-decoration: none;
+  &:hover {
+    text-decoration: none;
+    background-color: darken(red, 15%);
+    border: 1px solid darken(red, 45%);
+    @include colorselect(color, $c-body-text);
+  }
+}
