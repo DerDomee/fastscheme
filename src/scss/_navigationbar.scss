@@ -8,9 +8,9 @@ nav {
 	border:0px;
 	padding: 0;
 	box-sizing: content-box;
-	@include colorselect(background-color, $nav-background);
-	@include colorselect(color, $nav-text);
-	@include colorselect(border-bottom, $nav-border, "1px solid");
+	@include colorselect(background-color, $c-nav-background);
+	@include colorselect(color, $c-nav-text);
+	@include colorselect(border-bottom, $c-nav-border, "1px solid");
 
 	.nav-content {
 		@extend .content;
@@ -32,7 +32,7 @@ nav {
 				width: 25px;
 				height: 2px;
 				margin: 4px 0;
-				@include colorselect(background-color, $nav-text);
+				@include colorselect(background-color, $c-nav-text);
 			}
 		}
 
@@ -62,16 +62,16 @@ nav {
 			max-height: 0;
 			overflow-y: hidden;
 			transition: max-height 500ms;
-			@include colorselect(background-color, $nav-background);
+			@include colorselect(background-color, $c-nav-background);
 			border-bottom: 0;
 			&.opened {
 				max-height: 100vh;
-				@include colorselect(border-bottom, $nav-border, "1px solid");
+				@include colorselect(border-bottom, $c-nav-border, "1px solid");
 			}
 
 			li {
-				@include colorselect(background-color, $nav-background);
-				@include colorselect(color, $nav-text);
+				@include colorselect(background-color, $c-nav-background);
+				@include colorselect(color, $c-nav-text);
 				width: 100%;
 				text-align: center;
 				transition: background-color 100ms, color 100ms;
@@ -84,32 +84,32 @@ nav {
 					width: 100%;
 					box-sizing: border-box;
 					color: inherit;
-					@include colorselect(color, $nav-text);
+					@include colorselect(color, $c-nav-text);
 				}
 
 				&:hover,
 				&:focus {
 					text-decoration: none;
-					@include colorselect(background-color, $navitem-hover-bgcolor);
-					@include colorselect(color, $navitem-hover-text);
+					@include colorselect(background-color, $c-navitem-hover-bg);
+					@include colorselect(color, $c-navitem-hover-text);
 					a {
-						@include colorselect(color, $navitem-hover-text);
+						@include colorselect(color, $c-navitem-hover-text);
 					}
 				}
 
 				&.active {
 					&:hover,
 					&:focus {
-						@include colorselect(background-color, $navitem-hovact-bgcolor);
-						@include colorselect(color, $navitem-hovact-text);
+						@include colorselect(background-color, $c-navitem-hovact-bg);
+						@include colorselect(color, $c-navitem-hovact-text);
 						a {
-							@include colorselect(color, $navitem-hovact-text);
+							@include colorselect(color, $c-navitem-hovact-text);
 						}
 					}
-					@include colorselect(background-color, $navitem-active-bgcolor);
-					@include colorselect(color, $navitem-active-text);
+					@include colorselect(background-color, $c-navitem-active-bg);
+					@include colorselect(color, $c-navitem-active-text);
 					a {
-						@include colorselect(color, $navitem-active-text);
+						@include colorselect(color, $c-navitem-active-text);
 					}
 				}
 			}
