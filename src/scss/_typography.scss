@@ -51,8 +51,24 @@ main {
 
 code {
 	font-family: monospace;
+	@include colorselect(background-color, $c-codeblock-bg);
+	@include colorselect(color, $c-codeblock-text);
+	border-radius: 0.1rem;
+	padding: 2px;
+	&.block {
+		display: block;
+		white-space: pre-wrap;
+	}
 }
-
+codeblock {
+	display: block;
+	white-space: pre-wrap;
+	font-family: monospace;
+	@include colorselect(background-color, $c-codeblock-bg);
+	@include colorselect(color, $c-codeblock-text);
+	border-radius: 0.2rem;
+	padding: 2px;
+}
 h1,
 h2,
 h3,

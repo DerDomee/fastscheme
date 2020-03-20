@@ -16,6 +16,9 @@ $color-03: rgba(101, 182,  25, 1);		// Success Color
 $color-04: rgba(230, 126,  34, 1);		// Warning Color
 $color-05: rgba(192,  57,  43, 1);		// Error Color
 
+$color-06: rgba(255, 210, 160, 1);    // Highlight Color #1
+$color-07: rgba(192,  57,  43, 1);    // Highlight Color #2
+
 
 //     Color usage matrix:         LIGHT THEME:             DARK THEME:              DARKEST THEME:                   COLOR DESCRIPTION:
        $c-body-background:         $white-00,               $black-02,               $black-00;                    // Common Background-Color for the whole document
@@ -23,7 +26,7 @@ $color-05: rgba(192,  57,  43, 1);		// Error Color
 
         $c-nav-background:         $white-01,               $black-04,               $color-01;                    // Background-Color for Navigation Bar
               $c-nav-text:         $black-01,               $white-01,               $white-00;                    // Common Text-Color for Navigation Bar
-            $c-nav-border:         $white-02,               $white-02,        darken($color-01, 10%);              // Color of the bottom border of the Navigation Bar
+            $c-nav-border:         $white-02,               $white-04,        darken($color-01, 10%);              // Color of the bottom border of the Navigation Bar
       $c-navitem-hover-bg:         $color-01,               $color-01,        darken($color-01, 10%);              // Background-Color for hovererd/focused Navigation-Items
      $c-navitem-active-bg:  darken($color-01, 10%),  darken($color-01, 10%),  darken($color-01, 20%);              // Background-Color on active Navigation-Items
      $c-navitem-hovact-bg:  darken($color-01, 20%),  darken($color-01, 20%),  darken($color-01, 30%);              // Background-Color on active AND hovered/focused Navigation-Items
@@ -38,3 +41,5 @@ $color-05: rgba(192,  57,  43, 1);		// Error Color
          $c-color-warning:         $color-04,               $color-04,               $color-04;                    // Warning Color
            $c-color-error:         $color-05,               $color-05,               $color-05;                    // Error Color
 
+         $c-codeblock-bg:  lighten($color-06, 15%),         $black-03,               $black-01;                    // <code> Background color
+       $c-codeblock-text:          $color-05,               $color-06,               $color-06;                    // <code> Text color
