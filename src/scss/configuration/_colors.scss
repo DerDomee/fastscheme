@@ -11,9 +11,10 @@ $black-01: rgba(  8,   8,   8, 1);
 $black-00: rgba(  0,   0,   0, 1);
 
 $color-01: rgba( 52, 152, 219, 1);		// Primary Color, Brand
-$color-02: rgba(101, 182,  25, 1);		// Success Color
-$color-03: rgba(230, 126,  34, 1);		// Warning Color
-$color-04: rgba(192,  57,  43, 1);		// Error Color
+$color-02: rgba( 98,  43, 219, 1);    // Secondary Color
+$color-03: rgba(101, 182,  25, 1);		// Success Color
+$color-04: rgba(230, 126,  34, 1);		// Warning Color
+$color-05: rgba(192,  57,  43, 1);		// Error Color
 
 
 //     Color usage matrix:         LIGHT THEME:             DARK THEME:              DARKEST THEME:                   COLOR DESCRIPTION:
@@ -33,9 +34,9 @@ $color-04: rgba(192,  57,  43, 1);		// Error Color
             $c-link-color:  darken($color-01, 10%),         $color-01,               $color-01;                    // Common <a>-Link Color
       $c-link-hover-color:         $color-01,        darken($color-01, 10%),  darken($color-01, 10%);              // Common <a>-Link Color for hovered elements
 
-         $c-color-success:         $color-02,               $color-02,               $color-02;                    // Success Color
-         $c-color-warning:         $color-03,               $color-03,               $color-03;                    // Warning Color
-           $c-color-error:         $color-04,               $color-04,               $color-04;                    // Error Color
+         $c-color-success:         $color-03,               $color-03,               $color-03;                    // Success Color
+         $c-color-warning:         $color-04,               $color-04,               $color-04;                    // Warning Color
+           $c-color-error:         $color-05,               $color-05,               $color-05;                    // Error Color
 
 
 // Color selector mixin
