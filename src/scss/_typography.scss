@@ -47,12 +47,6 @@ html {
 main {
 	@extend .text;
 	@extend .text-autolayout;
-
-	margin-top: $navbar-height;
-
-	@include override-medium-screen {
-		margin-top: 0;
-	}
 }
 
 code {

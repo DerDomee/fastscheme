@@ -158,3 +158,10 @@ nav {
 		position: static;
 	}
 }
+
+nav+* {
+	margin-top: $navbar-height;
+	@include override-medium-screen {
+		margin-top: 0;
+	}
+}
