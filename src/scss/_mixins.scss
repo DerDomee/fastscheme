@@ -1,3 +1,31 @@
+// Color selector mixin
+@mixin colorselect($attribute, $color, $prestring: null, $sufstring: null) {
+  // Dark Theme is standard.
+  #{$attribute}: #{$prestring} dark($color) #{$sufstring};
+
+  // If browser specifically requests light scheme, then deliver.
+  @media(prefers-color-scheme: light) {
+    #{$attribute}: #{$prestring} light($color) #{$sufstring};
+  }
+
+  // If element also has a class to force a theme, use this theme instead:
+  &.force-theme-darkest {
+    // Force darkest (black) theme
+    #{$attribute}: #{$prestring} darkest($color) #{$sufstring} !important;
+  }
+
+  &.force-theme-dark {
+    // Force dark (default) theme
+    #{$attribute}: #{$prestring} dark($color) #{$sufstring} !important;
+  }
+
+  &.force-theme-light {
+    // Force light theme
+    #{$attribute}: #{$prestring} light($color) #{$sufstring} !important;
+  }
+}
+
+
 @mixin hide-medium-and-up {
 	@media screen and (min-width: $breakpoint-small) {
 		display: none;

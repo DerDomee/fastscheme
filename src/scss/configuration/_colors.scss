@@ -38,30 +38,3 @@ $color-05: rgba(192,  57,  43, 1);		// Error Color
          $c-color-warning:         $color-04,               $color-04,               $color-04;                    // Warning Color
            $c-color-error:         $color-05,               $color-05,               $color-05;                    // Error Color
 
-
-// Color selector mixin
-@mixin colorselect($attribute, $color, $prestring: null, $sufstring: null) {
-  // Dark Theme is standard.
-  #{$attribute}: #{$prestring} dark($color) #{$sufstring};
-
-  // If browser specifically requests light scheme, then deliver.
-  @media(prefers-color-scheme: light) {
-    #{$attribute}: #{$prestring} light($color) #{$sufstring};
-  }
-
-  // If element also has a class to force a theme, use this theme instead:
-  &.force-theme-darkest {
-    // Force darkest (black) theme
-    #{$attribute}: #{$prestring} darkest($color) #{$sufstring} !important;
-  }
-
-  &.force-theme-dark {
-    // Force dark (default) theme
-    #{$attribute}: #{$prestring} dark($color) #{$sufstring} !important;
-  }
-
-  &.force-theme-light {
-    // Force light theme
-    #{$attribute}: #{$prestring} light($color) #{$sufstring} !important;
-  }
-}
