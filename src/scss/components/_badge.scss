@@ -1,0 +1,35 @@
+.badge {
+  padding: 2px;
+  border: 0;
+  border-radius: 5px;
+
+  &.badge--primary {
+    @include colorselect(background-color, $button-primary-bg);
+    @include colorselect(color, $button-primary-text);
+  }
+
+  &.badge--secondary {
+      @include colorselect(background-color, $button-secondary-bg);
+      @include colorselect(color, $button-secondary-text);
+  }
+
+  &.badge--success {
+      @include colorselect(background-color, $button-success-bg);
+      @include colorselect(color, $button-success-text);
+  }
+
+  &.badge--warning {
+      @include colorselect(background-color, $button-warning-bg);
+      @include colorselect(color, $button-warning-text);
+  }
+
+  &.badge--danger {
+      @include colorselect(background-color, $button-danger-bg);
+      @include colorselect(color, $button-danger-text);
+  }
+
+  &.badge--rounded {
+    border-radius: 100vh;
+    padding: 2px 0.5rem;
+  }
+}
