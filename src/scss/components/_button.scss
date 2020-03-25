@@ -4,10 +4,14 @@ div.button {
   border-radius: 5px;
   cursor: pointer;
   padding: 8px;
+  margin: .2rem 0;
   text-decoration: none;
   font-size: 1.2rem;
-  line-height: 2.2rem;
+  line-height: 1.3rem;
   border: 1px solid;
+  text-align: center;
+  white-space: nowrap;
+  display: inline-block;
 
 
   &:hover {
@@ -67,15 +71,15 @@ div.button {
 
   &.btn--small {
     font-size: 1rem;
-    line-height: 0.95rem;
+    line-height: 1.1rem;
     padding: 3px;
-    margin: 3px 0px;
+    margin: .2rem 0px;
   }
 
   &.btn--large {
     font-size: 1.6rem;
-    line-height: 3.45rem;
+    line-height: 1.7rem;
     padding: 12px;
-    margin: 7px 0px;
+    margin: .2rem 0px;
   }
 }
