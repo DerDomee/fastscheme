@@ -8,6 +8,7 @@ div.button {
   font-size: 1.2rem;
   line-height: 2.2rem;
   margin: 4px 0px;
+  border: 1px solid;
 
 
   &:hover {
@@ -17,6 +18,7 @@ div.button {
   &.btn--primary {
     @include colorselect(background-color, $button-primary-bg);
     @include colorselect(color, $button-primary-text);
+    @include colorselect(border-color, $button-primary-border);
 
     &:hover {
 
@@ -26,6 +28,7 @@ div.button {
   &.btn--secondary {
       @include colorselect(background-color, $button-secondary-bg);
       @include colorselect(color, $button-secondary-text);
+      @include colorselect(border-color, $button-secondary-border);
 
       &:hover {
 
@@ -35,6 +38,7 @@ div.button {
   &.btn--success {
       @include colorselect(background-color, $button-success-bg);
       @include colorselect(color, $button-success-text);
+      @include colorselect(border-color, $button-success-border);
 
       &:hover {
 
@@ -44,6 +48,7 @@ div.button {
   &.btn--warning {
       @include colorselect(background-color, $button-warning-bg);
       @include colorselect(color, $button-warning-text);
+      @include colorselect(border-color, $button-warning-border);
 
       &:hover {
 
@@ -53,6 +58,7 @@ div.button {
   &.btn--danger {
       @include colorselect(background-color, $button-danger-bg);
       @include colorselect(color, $button-danger-text);
+      @include colorselect(border-color, $button-danger-border);
 
       &:hover {
 
