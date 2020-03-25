@@ -1,17 +1,76 @@
 button,
 a.button,
 div.button {
-  background-color: red;
-  border: 1px solid darken(red,40%);
   border-radius: 5px;
   cursor: pointer;
-  @include colorselect(color, $c-body-text);
-  padding: 3px;
+  padding: 8px;
   text-decoration: none;
+  font-size: 1.2rem;
+  line-height: 2.2rem;
+  margin: 4px 0px;
+
+
   &:hover {
     text-decoration: none;
-    background-color: darken(red, 15%);
-    border: 1px solid darken(red, 45%);
-    @include colorselect(color, $c-body-text);
+  }
+
+  &.btn--primary {
+    @include colorselect(background-color, $button-primary-bg);
+    @include colorselect(color, $button-primary-text);
+
+    &:hover {
+
+    }
+  }
+
+  &.btn--secondary {
+      @include colorselect(background-color, $button-secondary-bg);
+      @include colorselect(color, $button-secondary-text);
+
+      &:hover {
+
+      }
+  }
+
+  &.btn--success {
+      @include colorselect(background-color, $button-success-bg);
+      @include colorselect(color, $button-success-text);
+
+      &:hover {
+
+      }
+  }
+
+  &.btn--warning {
+      @include colorselect(background-color, $button-warning-bg);
+      @include colorselect(color, $button-warning-text);
+
+      &:hover {
+
+      }
+  }
+
+  &.btn--danger {
+      @include colorselect(background-color, $button-danger-bg);
+      @include colorselect(color, $button-danger-text);
+
+      &:hover {
+
+      }
+  }
+
+
+  &.btn--small {
+    font-size: 1rem;
+    line-height: 0.95rem;
+    padding: 3px;
+    margin: 3px 0px;
+  }
+
+  &.btn--large {
+    font-size: 1.6rem;
+    line-height: 3.45rem;
+    padding: 12px;
+    margin: 7px 0px;
   }
 }

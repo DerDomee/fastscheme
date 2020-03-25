@@ -41,5 +41,16 @@ $color-07: rgba(192,  57,  43, 1);    // Highlight Color #2
          $c-color-warning:         $color-04,               $color-04,               $color-04;                    // Warning Color
            $c-color-error:         $color-05,               $color-05,               $color-05;                    // Error Color
 
-         $c-codeblock-bg:  lighten($color-06, 15%),         $black-03,               $black-01;                    // <code> Background color
-       $c-codeblock-text:          $color-05,               $color-06,               $color-06;                    // <code> Text color
+         $c-codeblock-bg:  lighten($color-06, 15%),         $black-03,               $black-01;                    // <code> Background-Color
+       $c-codeblock-text:          $color-05,               $color-06,               $color-06;                    // <code> Text-Color
+
+      $button-primary-bg:          $color-01,               $color-01,               $color-01;                    // Primary Button Background-Color
+    $button-primary-text:          $black-01,               $white-01,               $white-00;                    // Primary Button Text-Color
+    $button-secondary-bg:          $color-02,               $color-02,               $color-02;                    // Secondary Button Background-Color
+  $button-secondary-text:          $black-01,               $white-01,               $white-00;                    // Secondary Button Text-Color
+      $button-success-bg:          $color-03,               $color-03,               $color-03;                    // Success Button Background-Color
+    $button-success-text:          $black-01,               $white-01,               $white-00;                    // Success Button Text-Color
+      $button-warning-bg:          $color-04,               $color-04,               $color-04;                    // Warning Button Background-Color
+    $button-warning-text:          $black-01,               $white-01,               $white-00;                    // Warning Button Text-Color
+       $button-danger-bg:          $color-05,               $color-05,               $color-05;                    // Danger Button Background-Color
+     $button-danger-text:          $black-01,               $white-01,               $white-00;                    // Danger Button Text-Color
