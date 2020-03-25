@@ -21,7 +21,7 @@ div.button {
     @include colorselect(border-color, $button-primary-border);
 
     &:hover {
-
+      @include colorselect(background-color, $button-primary-hover-bg);
     }
   }
 
@@ -31,7 +31,7 @@ div.button {
       @include colorselect(border-color, $button-secondary-border);
 
       &:hover {
-
+        @include colorselect(background-color, $button-secondary-hover-bg);
       }
   }
 
@@ -41,7 +41,7 @@ div.button {
       @include colorselect(border-color, $button-success-border);
 
       &:hover {
-
+        @include colorselect(background-color, $button-success-hover-bg);
       }
   }
 
@@ -51,7 +51,7 @@ div.button {
       @include colorselect(border-color, $button-warning-border);
 
       &:hover {
-
+        @include colorselect(background-color, $button-warning-hover-bg);
       }
   }
 
@@ -61,7 +61,7 @@ div.button {
       @include colorselect(border-color, $button-danger-border);
 
       &:hover {
-
+        @include colorselect(background-color, $button-danger-hover-bg);
       }
   }
 
