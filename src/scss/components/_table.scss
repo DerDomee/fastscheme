@@ -1,0 +1,22 @@
+th {
+  text-align: start;
+}
+table {
+  width: 100%;
+  @include colorselect(background-color, $table-bg);
+  @include colorselect(color, $table-text);
+  vertical-align: top;
+  border: 0;
+  border-spacing: 0;
+
+  tbody {
+
+    tr {
+      &:nth-of-type(odd) {
+        @include colorselect(background-color, $table-alternate-bg);
+      }
+    }
+  }
+
+
+}

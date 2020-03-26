@@ -69,3 +69,7 @@ $color-07: rgba(192,  57,  43, 1);    // Highlight Color #2
         $button-danger-border:  darken($color-05, 10%), lighten($color-05, 10%), lighten($color-05, 10%);              // Danger Button Border-Color
       $button-danger-hover-bg:  darken($color-05, 10%), lighten($color-05, 10%), lighten($color-05, 10%);              // Danger Button Hover Background-Color
           $button-danger-text:         $black-01,               $white-01,               $white-00;                    // Danger Button Text-Color
+
+                    $table-bg:         $white-02,               $black-02,               $black-02;                    // Table Background-Color
+          $table-alternate-bg:         $white-01,               $black-03,               $black-03;                    // Table Alternating Background-Color
+                  $table-text:         $black-01,               $white-01,               $white-00;                    // Table Text-Color
