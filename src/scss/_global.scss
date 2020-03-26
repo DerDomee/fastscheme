@@ -1,6 +1,11 @@
-* {
-  font-family: $font-stack;
+*,
+*::before
+*::after {
   box-sizing: border-box;
+}
+
+:root {
+  font-family: $font-stack;
 }
 
 body {
@@ -19,4 +24,9 @@ a {
     @include colorselect(color, $c-link-hover-color);
   }
   @include colorselect(color, $c-link-color);
+}
+
+// Always hide an element with the 'hidden' HTML attribute
+[hidden] {
+  display: none !important;
 }

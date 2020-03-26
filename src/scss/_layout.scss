@@ -18,6 +18,7 @@
 
 main {
   @include clearfix;
+  display: block;
 }
 
 // footer is using large paddings instead of "width + margin: auto"
