@@ -1,18 +1,18 @@
 .container {
   margin: 0 auto;
   padding: 0 0;
-  width: 95%;
+  width: percentage(nth($container-width, 1));
 
   @include override-medium-screen {
-    width: 85%;
+    width: percentage(nth($container-width, 2));
   }
 
   @include override-large-screen {
-    width: 77%;
+    width: percentage(nth($container-width, 3));
   }
 
   @include override-largest-screen {
-    width: 70%;
+    width: percentage(nth($container-width, 4));
   }
 }
 
@@ -23,18 +23,18 @@ main {
 footer {
   width: 100%;
   margin: 0 0;
-  padding: 0 2.5%;
+  padding: 0 percentage((1 - nth($container-width, 1))/nth($container-footer-denominator, 1));
 
   @include override-medium-screen {
-    padding: 0 7.5%;
+    padding: 0 percentage((1 - nth($container-width, 2))/nth($container-footer-denominator, 2));
   }
 
   @include override-large-screen {
-    padding: 0 11.5%;
+    padding: 0 percentage((1 - nth($container-width, 3))/nth($container-footer-denominator, 3));
   }
 
   @include override-largest-screen {
-    padding: 0 15%;
+    padding: 0 percentage((1 - nth($container-width, 4))/nth($container-footer-denominator, 4));
   }
 }
 
