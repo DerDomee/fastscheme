@@ -26,6 +26,7 @@ main {
 footer {
   width: 100%;
   margin: 0 0;
+  margin-top: $footer-spacing;
   padding: 0 percentage((1 - nth($container-width, 1))/nth($container-footer-denominator, 1));
 
   @include override-medium-screen {
