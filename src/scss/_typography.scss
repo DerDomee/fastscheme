@@ -1,13 +1,13 @@
 html {
-	line-height: $font-line-height;
+  line-height: $font-line-height;
 
-	font-size: $font-size-small;
+  font-size: $font-size-small;
 
   @include override-medium-screen {
-		font-size: $font-size-medium;
-	}
+    font-size: $font-size-medium;
+  }
 
-	@include override-large-screen {
+  @include override-large-screen {
     font-size: $font-size-large;
   }
 
@@ -15,59 +15,59 @@ html {
     font-size: $font-size-largest;
   }
 
-	font-weight: normal;
+  font-weight: normal;
 }
 
 .text {
-	font-size: 1rem;
-	hyphens: manual;
-	line-height: 1.5rem;
+  font-size: 1rem;
+  hyphens: manual;
+  line-height: 1.5rem;
 
-	@include override-medium-screen {
-		line-height: 1.6rem;
-	}
+  @include override-medium-screen {
+    line-height: 1.6rem;
+  }
 
-	@include override-large-screen {
-		line-height: 1.7rem;
-	}
+  @include override-large-screen {
+    line-height: 1.7rem;
+  }
 
-	@include override-largest-screen {
-		line-height: 1.8rem;
-	}
+  @include override-largest-screen {
+    line-height: 1.8rem;
+  }
 }
 
 .text-autolayout {
-	text-align: justify;
+  text-align: justify;
 
-	@include override-medium-screen {
-		text-align: start;
-	}
+  @include override-medium-screen {
+    text-align: start;
+  }
 }
 
 main {
-	@extend .text;
-	@extend .text-autolayout;
+  @extend .text;
+  @extend .text-autolayout;
 }
 
 code {
-	font-family: monospace;
-	@include colorselect(background-color, $c-codeblock-bg);
-	@include colorselect(color, $c-codeblock-text);
-	border-radius: 0.1rem;
-	padding: 2px;
-	&.block {
-		display: block;
-		white-space: pre-wrap;
-	}
+  font-family: monospace;
+  @include colorselect(background-color, $c-codeblock-bg);
+  @include colorselect(color, $c-codeblock-text);
+  border-radius: 0.1rem;
+  padding: 2px;
+  &.block {
+    display: block;
+    white-space: pre-wrap;
+  }
 }
 codeblock {
-	display: block;
-	white-space: pre-wrap;
-	font-family: monospace;
-	@include colorselect(background-color, $c-codeblock-bg);
-	@include colorselect(color, $c-codeblock-text);
-	border-radius: 0.2rem;
-	padding: 2px;
+  display: block;
+  white-space: pre-wrap;
+  font-family: monospace;
+  @include colorselect(background-color, $c-codeblock-bg);
+  @include colorselect(color, $c-codeblock-text);
+  border-radius: 0.2rem;
+  padding: 2px;
 }
 h1,
 h2,
@@ -75,37 +75,37 @@ h3,
 h4,
 h5,
 h6 {
-	text-align: start;
-	//margin: 2rem 0 1.5rem 0;
-	//padding: 0;
+  text-align: start;
+  //margin: 2rem 0 1.5rem 0;
+  //padding: 0;
 }
 
 h1 {
-	font-size: 2.0rem;
-	line-height: 2.1rem;
+  font-size: 2.0rem;
+  line-height: 2.1rem;
 }
 
 h2 {
-	font-size: 1.7rem;
-	line-height: 1.8rem;
+  font-size: 1.7rem;
+  line-height: 1.8rem;
 }
 
 h3 {
-	font-size: 1.5rem;
-	line-height: 1.6rem;
+  font-size: 1.5rem;
+  line-height: 1.6rem;
 }
 
 h4 {
-	font-size: 1.3rem;
-	line-height: 1.4rem;
+  font-size: 1.3rem;
+  line-height: 1.4rem;
 }
 
 h5 {
-	font-size: 1.2rem;
-	line-height: 1.3rem;
+  font-size: 1.2rem;
+  line-height: 1.3rem;
 }
 
 h6 {
-	font-size: 1.1rem;
-	line-height: 1.2rem;
+  font-size: 1.1rem;
+  line-height: 1.2rem;
 }

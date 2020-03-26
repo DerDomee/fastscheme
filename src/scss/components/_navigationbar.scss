@@ -1,167 +1,167 @@
 
 nav {
-	height: $navbar-height;
-	line-height: $navbar-height;
-	position: fixed;
-	top: 0;
-	width: 100%;
-	border:0px;
-	padding: 0;
-	box-sizing: content-box;
-	@include colorselect(background-color, $c-nav-background);
-	@include colorselect(color, $c-nav-text);
-	@include colorselect(border-bottom, $c-nav-border, "1px solid");
+  height: $navbar-height;
+  line-height: $navbar-height;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  border: 0px;
+  padding: 0;
+  box-sizing: content-box;
+  @include colorselect(background-color, $c-nav-background);
+  @include colorselect(color, $c-nav-text);
+  @include colorselect(border-bottom, $c-nav-border, "1px solid");
 
-	.nav-content {
-		display: flex;
-		flex-direction: row;
-		box-sizing: content-box;
-		position: relative;
+  .nav-content {
+    display: flex;
+    flex-direction: row;
+    box-sizing: content-box;
+    position: relative;
 
-		#burger-menu {
-			display: block;
-			box-sizing: border-box;
-			line-height: normal;
-			height: fit-content;
-			align-self: center;
-			cursor: pointer;
-			@include hide-medium-and-up;
-			padding: 7px 7px;
-			div{
-				width: 25px;
-				height: 2px;
-				margin: 4px 0;
-				@include colorselect(background-color, $c-nav-text);
-			}
-		}
+    #burger-menu {
+      display: block;
+      box-sizing: border-box;
+      line-height: normal;
+      height: fit-content;
+      align-self: center;
+      cursor: pointer;
+      @include hide-medium-and-up;
+      padding: 7px 7px;
+      div{
+        width: 25px;
+        height: 2px;
+        margin: 4px 0;
+        @include colorselect(background-color, $c-nav-text);
+      }
+    }
 
-		#nav-brand {
-			height: $navbar-height;
-			margin: 0 auto;
-			img {
-				height: 100%;
-				width: auto;
-			}
-			@include override-medium-screen{
-				margin: 0 0;
-			}
-		}
+    #nav-brand {
+      height: $navbar-height;
+      margin: 0 auto;
+      img {
+        height: 100%;
+        width: auto;
+      }
+      @include override-medium-screen{
+        margin: 0 0;
+      }
+    }
 
-		ul {
-			padding: 0;
-			position: fixed;
-			top: $navbar-height + 1px;
-			left: 0px;
-			width: 100%;
-			display: flex;
-			margin: 0 0;
-			flex-direction: column;
-			list-style-type: none;
-			box-sizing: content-box;
-			max-height: 0;
-			overflow-y: hidden;
-			transition: max-height 500ms;
-			@include colorselect(background-color, $c-nav-background);
-			border-bottom: 0;
-			&.opened {
-				max-height: 100vh;
-				@include colorselect(border-bottom, $c-nav-border, "1px solid");
-			}
+    ul {
+      padding: 0;
+      position: fixed;
+      top: $navbar-height + 1px;
+      left: 0px;
+      width: 100%;
+      display: flex;
+      margin: 0 0;
+      flex-direction: column;
+      list-style-type: none;
+      box-sizing: content-box;
+      max-height: 0;
+      overflow-y: hidden;
+      transition: max-height 500ms;
+      @include colorselect(background-color, $c-nav-background);
+      border-bottom: 0;
+      &.opened {
+        max-height: 100vh;
+        @include colorselect(border-bottom, $c-nav-border, "1px solid");
+      }
 
-			li {
-				@include colorselect(background-color, $c-nav-background);
-				@include colorselect(color, $c-nav-text);
-				width: 100%;
-				text-align: center;
-				transition: background-color 100ms, color 100ms;
+      li {
+        @include colorselect(background-color, $c-nav-background);
+        @include colorselect(color, $c-nav-text);
+        width: 100%;
+        text-align: center;
+        transition: background-color 100ms, color 100ms;
 
-				a {
-					text-decoration: inherit;
-					display: inline-block;
-					height: $navbar-height;
-					line-height: $navbar-height;
-					width: 100%;
-					box-sizing: border-box;
-					color: inherit;
-					@include colorselect(color, $c-nav-text);
-				}
+        a {
+          text-decoration: inherit;
+          display: inline-block;
+          height: $navbar-height;
+          line-height: $navbar-height;
+          width: 100%;
+          box-sizing: border-box;
+          color: inherit;
+          @include colorselect(color, $c-nav-text);
+        }
 
-				&:hover,
-				&:focus {
-					text-decoration: none;
-					@include colorselect(background-color, $c-navitem-hover-bg);
-					@include colorselect(color, $c-navitem-hover-text);
-					a {
-						@include colorselect(color, $c-navitem-hover-text);
-					}
-				}
+        &:hover,
+        &:focus {
+          text-decoration: none;
+          @include colorselect(background-color, $c-navitem-hover-bg);
+          @include colorselect(color, $c-navitem-hover-text);
+          a {
+            @include colorselect(color, $c-navitem-hover-text);
+          }
+        }
 
-				&.active {
-					&:hover,
-					&:focus {
-						@include colorselect(background-color, $c-navitem-hovact-bg);
-						@include colorselect(color, $c-navitem-hovact-text);
-						a {
-							@include colorselect(color, $c-navitem-hovact-text);
-						}
-					}
-					@include colorselect(background-color, $c-navitem-active-bg);
-					@include colorselect(color, $c-navitem-active-text);
-					a {
-						@include colorselect(color, $c-navitem-active-text);
-					}
-				}
-			}
+        &.active {
+          &:hover,
+          &:focus {
+            @include colorselect(background-color, $c-navitem-hovact-bg);
+            @include colorselect(color, $c-navitem-hovact-text);
+            a {
+              @include colorselect(color, $c-navitem-hovact-text);
+            }
+          }
+          @include colorselect(background-color, $c-navitem-active-bg);
+          @include colorselect(color, $c-navitem-active-text);
+          a {
+            @include colorselect(color, $c-navitem-active-text);
+          }
+        }
+      }
 
 
 
-			@include override-medium-screen {
-				position: absolute;
-				top: inherit;
-				left: inherit;
-				bottom: inherit;
-				right: 0;
-				float: right;
-				width: fit-content;
-				height: $navbar-height;
-				max-height: $navbar-height;
-				flex-direction: row;
-				transform: none;
-				overflow: auto;
-				background-color: transparent;
-				transition: transform 0ms;
-				border-bottom: 0;
+      @include override-medium-screen {
+        position: absolute;
+        top: inherit;
+        left: inherit;
+        bottom: inherit;
+        right: 0;
+        float: right;
+        width: fit-content;
+        height: $navbar-height;
+        max-height: $navbar-height;
+        flex-direction: row;
+        transform: none;
+        overflow: auto;
+        background-color: transparent;
+        transition: transform 0ms;
+        border-bottom: 0;
 
-				li {
-					background-color: transparent;
-					width: fit-content;
-					text-align: inherit;
-					a {
-						padding: 0 13px;
-						width: inherit;
-					}
-				}
-			}
+        li {
+          background-color: transparent;
+          width: fit-content;
+          text-align: inherit;
+          a {
+            padding: 0 13px;
+            width: inherit;
+          }
+        }
+      }
 
-			@include override-large-screen {
-				right: 6%;
-			}
+      @include override-large-screen {
+        right: 6%;
+      }
 
-			@include override-largest-screen {
-				right: 10%;
-			}
-		}
+      @include override-largest-screen {
+        right: 10%;
+      }
+    }
 
-	}
+  }
 
-	@include override-medium-screen {
-		position: static;
-	}
+  @include override-medium-screen {
+    position: static;
+  }
 }
 
 nav+* {
-	margin-top: $navbar-height;
-	@include override-medium-screen {
-		margin-top: 0;
-	}
+  margin-top: $navbar-height;
+  @include override-medium-screen {
+    margin-top: 0;
+  }
 }
