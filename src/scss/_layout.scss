@@ -20,6 +20,9 @@ main {
   @include clearfix;
 }
 
+// footer is using large paddings instead of "width + margin: auto"
+// just to make it possible to color in the footer in a different
+// background color than the body.
 footer {
   width: 100%;
   margin: 0 0;
