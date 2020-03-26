@@ -1,5 +1,8 @@
-html {
+:root {
+  font-family: $font-stack;
+  font-weight: normal;
   line-height: $font-line-height;
+
 
   font-size: $font-size-small;
 
@@ -15,7 +18,6 @@ html {
     font-size: $font-size-largest;
   }
 
-  font-weight: normal;
 }
 
 .text {
@@ -60,7 +62,9 @@ code {
     white-space: pre-wrap;
   }
 }
-codeblock {
+
+codeblock,
+pre {
   display: block;
   white-space: pre-wrap;
   font-family: monospace;
