@@ -1,6 +1,6 @@
 {
   "name": "fastscheme",
-  "version": "0.0.1",
+  "version": "0.3.0",
   "description": "A lightweight HTML/CSS/JS Framework designed to make colorscheming easier",
   "homepage": "https://dominikriedig.de/",
   "main": "dist/js/fastscheme.js",
