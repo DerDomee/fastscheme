@@ -8,17 +8,17 @@ $breakpoint-medium: 1024px !default;
 $breakpoint-large: 1200px !default;
 
 // Container Width for small, medium, large and largest screens
-$container-width: .95, .85, .77, .70;
-$container-footer-denominator: 2, 2, 2, 2;
+$container-width: .95, .85, .77, .70 !default;
+$container-footer-denominator: 2, 2, 2, 2 !default;
 
 // Footer
-$footer-spacing: 40px;
+$footer-spacing: 40px !default;
 
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
 $font-size-small: 15.5px !default;
 $font-size-medium: 15.8px !default;
 $font-size-large: 16.2px !default;
 $font-size-largest: 16.5px !default;
-$font-line-height: 1.5rem;
+$font-line-height: 1.5rem !default;
 
-$navbar-height: 50px !default;
+$navbar-height: 40px !default;
