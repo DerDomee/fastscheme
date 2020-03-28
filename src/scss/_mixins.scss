@@ -1,13 +1,25 @@
 // Color selector mixin
 @mixin colorselect($attribute, $color, $prestring: null, $sufstring: null) {
-  // Dark Theme is standard.
-  #{$attribute}: #{$prestring} dark($color) #{$sufstring};
-
-  // If browser specifically requests light scheme, then deliver.
-  @media(prefers-color-scheme: light) {
+  // If Variable is explicitly set, then light theme shall
+  // be the fallback default.
+  @if $no-scheme-compat-fallback-light {
     #{$attribute}: #{$prestring} light($color) #{$sufstring};
-  }
 
+    // If browser specifically requests dark scheme, then deliver.
+    @media(prefers-color-scheme: dark) {
+      #{$attribute}: #{$prestring} dark($color) #{$sufstring};
+    }
+  }
+  @else {
+    // If Variable is left to default, then dark theme shall
+    // be the fallback default.
+    #{$attribute}: #{$prestring} dark($color) #{$sufstring};
+
+    // If browser specifically requests light scheme, then deliver.
+    @media(prefers-color-scheme: light) {
+      #{$attribute}: #{$prestring} light($color) #{$sufstring};
+    }
+  }
   //Check if overrides are enabled, then use them in the mixin
   @if $fs-build-overrides {
     // If element also has a class to force a theme, use this theme instead:
@@ -17,7 +29,7 @@
     }
 
     &.force-theme-dark {
-      // Force dark (default) theme
+      // Force dark theme
       #{$attribute}: #{$prestring} dark($color) #{$sufstring} !important;
     }
 
