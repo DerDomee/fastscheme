@@ -159,6 +159,12 @@ nav {
   }
 }
 
+
+
+// My Navbar implementation relies on a given successor element
+// inside the header section.
+// This obviously needs a major overhaul.
+// (In my current build I use this for a nice title picture with headings)
 nav+* {
   margin-top: $navbar-height;
   @include override-medium-screen {
