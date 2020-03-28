@@ -8,20 +8,23 @@
     #{$attribute}: #{$prestring} light($color) #{$sufstring};
   }
 
-  // If element also has a class to force a theme, use this theme instead:
-  &.force-theme-darkest {
-    // Force darkest (black) theme
-    #{$attribute}: #{$prestring} darkest($color) #{$sufstring} !important;
-  }
+  //Check if overrides are enabled, then use them in the mixin
+  @if $fs-build-overrides {
+    // If element also has a class to force a theme, use this theme instead:
+    &.force-theme-darkest {
+      // Force darkest (black) theme
+      #{$attribute}: #{$prestring} darkest($color) #{$sufstring} !important;
+    }
 
-  &.force-theme-dark {
-    // Force dark (default) theme
-    #{$attribute}: #{$prestring} dark($color) #{$sufstring} !important;
-  }
+    &.force-theme-dark {
+      // Force dark (default) theme
+      #{$attribute}: #{$prestring} dark($color) #{$sufstring} !important;
+    }
 
-  &.force-theme-light {
-    // Force light theme
-    #{$attribute}: #{$prestring} light($color) #{$sufstring} !important;
+    &.force-theme-light {
+      // Force light theme
+      #{$attribute}: #{$prestring} light($color) #{$sufstring} !important;
+    }
   }
 }
 
