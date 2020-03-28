@@ -8,7 +8,7 @@
     "css": "npm-run-all css-compile css-autoprefix css-minify",
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true src/scss/ -o dist/css/",
     "css-autoprefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
-    "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/fastscheme.min.css dist/css/fastscheme.css",
+    "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/fastscheme.min.css dist/css/fastscheme.css && cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/fastscheme-nooverrides.min.css dist/css/fastscheme-nooverrides.css",
     "serve": "http-server",
     "start": "npm-run-all css serve"
   },
