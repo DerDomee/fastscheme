@@ -1,4 +1,9 @@
-
+/* ##################
+ * #
+ * #     LAYOUT
+ * #
+ * ##################
+ */
 // Everything under breakpoint "small" is called "small screen"
 // Everything between breakpoints "small, medium" is called "medium screen"
 // Everything between breakpoints "medium, large" is called "large screen"
@@ -16,6 +21,16 @@ $container-footer-denominator: 2, 2, 2, 2 !default;
 // Footer
 $footer-spacing: 40px !default;
 
+
+
+
+/* ##################
+ * #
+ * #   TYPOGRAPHY
+ * #
+ * ##################
+ */
+
 // Font Stack using the default Bootstrap fontstack.
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
 // Font sizes for different screen sizes to maintain readability while being responsive.
@@ -23,6 +38,18 @@ $font-size-small: 15.5px !default;
 $font-size-medium: 15.8px !default;
 $font-size-large: 16.2px !default;
 $font-size-largest: 16.5px !default;
+// Default line height depends on the given font size per screen size and is relative to the root
 $font-line-height: 1.5rem !default;
 
+
+/* ##################
+ * #
+ * #     MODULES
+ * #
+ * ##################
+ */
+
+/*
+ *   NAVIGATION BAR
+ */
 $navbar-height: 40px !default;
