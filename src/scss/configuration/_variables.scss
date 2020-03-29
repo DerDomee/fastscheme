@@ -1,19 +1,29 @@
-/* ##################
- * #
- * # GENERAL SETTINGS
- * #
- * ##################
+/*!
+ *  Fastscheme by Dominik Riedig
+ *
+ *  
+ *
+ *
+ *
  */
+
+// ##################
+// #
+// # GENERAL SETTINGS
+// #
+// ##################
+
 // If the browser doesn't support @prefers-color-schemes, should
 // Light theme be the fallback default instead of Dark Theme?
 $no-scheme-compat-fallback-light: 1;
 
-/* ##################
- * #
- * #     LAYOUT
- * #
- * ##################
- */
+// ##################
+// #
+// #     LAYOUT
+// #
+// ##################
+
+
 // Everything under breakpoint "small" is called "small screen"
 // Everything between breakpoints "small, medium" is called "medium screen"
 // Everything between breakpoints "medium, large" is called "large screen"
@@ -34,12 +44,11 @@ $footer-spacing: 40px !default;
 
 
 
-/* ##################
- * #
- * #   TYPOGRAPHY
- * #
- * ##################
- */
+// ##################
+// #
+// #   TYPOGRAPHY
+// #
+// ##################
 
 // Font Stack using the default Bootstrap fontstack.
 $font-stack: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen-Sans, Ubuntu, Cantarell, "Helvetica Neue", sans-serif !default;
@@ -52,14 +61,12 @@ $font-size-largest: 16.5px !default;
 $font-line-height: 1.5rem !default;
 
 
-/* ##################
- * #
- * #     MODULES
- * #
- * ##################
- */
+// ##################
+// #
+// #     MODULES
+// #
+// ##################
 
-/*
- *   NAVIGATION BAR
- */
+
+// NAVIGATION BAR
 $navbar-height: 50px !default;
