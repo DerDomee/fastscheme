@@ -9,8 +9,10 @@
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true src/scss/ -o dist/css/",
     "css-autoprefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/fastscheme.min.css dist/css/fastscheme.css && cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/fastscheme-nooverrides.min.css dist/css/fastscheme-nooverrides.css",
+    "js":"npm-run-all js-compile",
+    "js-compile": "rollup --config build/rollup.config.js",
     "serve": "http-server",
-    "start": "npm-run-all css serve"
+    "start": "npm-run-all css js serve"
   },
   "repository": {
     "type": "git",
@@ -39,6 +41,9 @@
     "http-server": "^0.12.1",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^6.1.3"
+    "postcss-cli": "^7.1.0"
+  },
+  "dependencies": {
+    "rollup": "^2.2.0"
   }
 }
