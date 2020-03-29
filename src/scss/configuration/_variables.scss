@@ -6,7 +6,7 @@
  */
 // If the browser doesn't support @prefers-color-schemes, should
 // Light theme be the fallback default instead of Dark Theme?
-$no-scheme-compat-fallback-light: 0
+$no-scheme-compat-fallback-light: 1;
 
 /* ##################
  * #
