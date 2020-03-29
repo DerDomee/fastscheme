@@ -91,13 +91,7 @@
         </tbody>
       </table>
 
-      <form name="changeTheme">
-        <h2>Demo: Farbschema auswählen</h2>
-        <label><input type="radio" name="setTheme" value="1" onClick="fastscheme.enableTheme()" checked="true" /><strong>Browserdefault</strong> (Verwendet <code>prefers-color-scheme</code>. Wenn das nicht unterstützt wird, ist Dark Theme das Fallback.)</label><br>
-        <label><input type="radio" name="setTheme" value="toggleLight" onClick="fastscheme.enableTheme('force-theme-light')" /><strong>Light Theme</strong> (Warnung: Es gibt keinen Colorfade. Bei Nacht könnte es gefährlich sein, diese Option auszuwählen!)</label><br>
-        <label><input type="radio" name="setTheme" value="toggleDark" onClick="fastscheme.enableTheme('force-theme-dark')" /><strong>Dark Theme</strong> (Forciert das Dark Theme, auch wenn es bereits per Browserdefault ausgewählt war. Ändert dann halt nur nix)</label><br>
-        <label><input type="radio" name="setTheme" value="toggleDarkest" onClick="fastscheme.enableTheme('force-theme-darkest')" /><strong>Black Theme</strong> (Beispiel für ein Custom-Theme, das nicht durch prefers-color-scheme gesteuert wird. Davon kann es beliebig viele geben.)</label>
-      </form>
+      <scheme-select></scheme-select>
     </main>
     <footer>
       <a href="https://dominikriedig.de/main/imprint/">Impressum (Die verlinkte Seite kann kein Dark-Theme, Achtung!)</a>

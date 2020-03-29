@@ -1,10 +1,11 @@
-var enableTheme = function (newTheme = null) {
-  document.querySelectorAll('*').forEach(function(node) {
-    node.classList.remove("force-theme-dark")
-    node.classList.remove("force-theme-light")
-    node.classList.remove("force-theme-darkest")
-    if(newTheme != null) node.classList.add(newTheme)
-  })
+class Rescheme {
+  constructor(arg1, arg2, arg3) {
+    const element = arg1, preset = arg2, config = arg3
+    console.log(element, preset, config);
+    document.getElementById
+  }
 }
 
-export default enableTheme
+export {
+  Rescheme
+}
