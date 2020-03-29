@@ -4,21 +4,18 @@ class Rescheme {
     console.log(element, preset, config);
   }
 
-  changeTheme(arg1) {
-    const newtheme = arg1
+  /**
+    */
+  changeTheme(arg1, arg2 = true) {
+    const newtheme = arg1, usecookie = arg2
     document.querySelectorAll('*').forEach(function(node) {
       var classes = node.className
-      var clist = classes.split(/\s+/)
-      if(clist.length > 0) console.log(node + " has classes " + clist)
-      for(var i = clist.length-1; 0; i-1) {
-        if(clist[i].startsWith("force-theme-")) {
-          console.log("Removing class " + clist[i] + " from " + node);
-          // TODO: Removing doesnt work yet. HUH?
-          clist = clist.splice(i, 1);
-        }
-      }
+      var classprefix = "force-theme-"
+      var clist = classes.split(" ").filter(function (c){
+        return c.lastIndexOf(classprefix, 0) !== 0
+      })
       clist.push(newtheme)
-      node.className= clist.join(" ")
+      node.className = clist.join(" ").trim()
     })
   }
 }
