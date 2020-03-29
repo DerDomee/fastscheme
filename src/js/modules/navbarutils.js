@@ -5,4 +5,9 @@ class NavbarUtils {
   }
 
 }
+
+document.querySelector('nav .nav-content #burger-menu').addEventListener('click', () => {
+  document.querySelector('nav .nav-content ul').classList.toggle("opened")
+})
+
 export default NavbarUtils

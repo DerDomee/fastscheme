@@ -93,32 +93,17 @@
 
       <form name="changeTheme">
         <h2>Demo: Farbschema auswählen</h2>
-        <label><input type="radio" name="setTheme" value="1" onClick="enableTheme()" checked="true" /><strong>Browserdefault</strong> (Verwendet <code>prefers-color-scheme</code>. Wenn das nicht unterstützt wird, ist Dark Theme das Fallback.)</label><br>
-        <label><input type="radio" name="setTheme" value="toggleLight" onClick="enableTheme('force-theme-light')" /><strong>Light Theme</strong> (Warnung: Es gibt keinen Colorfade. Bei Nacht könnte es gefährlich sein, diese Option auszuwählen!)</label><br>
-        <label><input type="radio" name="setTheme" value="toggleDark" onClick="enableTheme('force-theme-dark')" /><strong>Dark Theme</strong> (Forciert das Dark Theme, auch wenn es bereits per Browserdefault ausgewählt war. Ändert dann halt nur nix)</label><br>
-        <label><input type="radio" name="setTheme" value="toggleDarkest" onClick="enableTheme('force-theme-darkest')" /><strong>Black Theme</strong> (Beispiel für ein Custom-Theme, das nicht durch prefers-color-scheme gesteuert wird. Davon kann es beliebig viele geben.)</label>
+        <label><input type="radio" name="setTheme" value="1" onClick="fastscheme.enableTheme()" checked="true" /><strong>Browserdefault</strong> (Verwendet <code>prefers-color-scheme</code>. Wenn das nicht unterstützt wird, ist Dark Theme das Fallback.)</label><br>
+        <label><input type="radio" name="setTheme" value="toggleLight" onClick="fastscheme.enableTheme('force-theme-light')" /><strong>Light Theme</strong> (Warnung: Es gibt keinen Colorfade. Bei Nacht könnte es gefährlich sein, diese Option auszuwählen!)</label><br>
+        <label><input type="radio" name="setTheme" value="toggleDark" onClick="fastscheme.enableTheme('force-theme-dark')" /><strong>Dark Theme</strong> (Forciert das Dark Theme, auch wenn es bereits per Browserdefault ausgewählt war. Ändert dann halt nur nix)</label><br>
+        <label><input type="radio" name="setTheme" value="toggleDarkest" onClick="fastscheme.enableTheme('force-theme-darkest')" /><strong>Black Theme</strong> (Beispiel für ein Custom-Theme, das nicht durch prefers-color-scheme gesteuert wird. Davon kann es beliebig viele geben.)</label>
       </form>
     </main>
     <footer>
       <a href="https://dominikriedig.de/main/imprint/">Impressum (Die verlinkte Seite kann kein Dark-Theme, Achtung!)</a>
     </footer>
 
-
-    <script type="text/javascript" defer>
-      function enableTheme(newTheme = null) {
-        document.querySelectorAll('*').forEach(function(node) {
-          node.classList.remove("force-theme-dark")
-          node.classList.remove("force-theme-light")
-          node.classList.remove("force-theme-darkest")
-          if(newTheme != null) node.classList.add(newTheme)
-        })
-      }
-      document.querySelector('nav .nav-content #burger-menu').addEventListener('click', () => {
-        document.querySelector('nav .nav-content ul').classList.toggle("opened")
-      })
-    </script>
-
-
+    <script type="text/javascript" src="/dist/js/fastscheme.js" ></script>
 
   </body>
 </html>
