@@ -1,9 +1,9 @@
-import NavbarUtils from './modules/navbarutils'
 import enableTheme from './modules/rescheme'
+import { NavbarBurger } from './modules/navbarutils'
 
 console.log("Fastscheme wird geladen...")
 
-export default {
-  NavbarUtils,
   enableTheme
+export {
+  NavbarBurger,
 }
