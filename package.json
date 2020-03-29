@@ -9,8 +9,8 @@
     "css-compile": "node-sass --output-style expanded --source-map true --source-map-contents true src/scss/ -o dist/css/",
     "css-autoprefix": "postcss --config build/postcss.config.js --replace \"dist/css/*.css\" \"!dist/css/*.min.css\"",
     "css-minify": "cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/fastscheme.min.css dist/css/fastscheme.css && cleancss --level 1 --format breakWith=lf --source-map --source-map-inline-sources --output dist/css/fastscheme-nooverrides.min.css dist/css/fastscheme-nooverrides.css",
-    "js":"npm-run-all js-compile",
-    "js-compile": "rollup --config build/rollup.config.js",
+    "js": "npm-run-all js-compile",
+    "js-compile": "rollup --config build/rollup.config.js --sourcemap",
     "serve": "http-server",
     "start": "npm-run-all css js serve"
   },
@@ -36,14 +36,20 @@
   "style": "dist/css/fastscheme.css",
   "scss": "src/scss/fastscheme.scss",
   "devDependencies": {
+    "@babel/cli": "^7.8.4",
+    "@babel/core": "^7.9.0",
+    "@babel/plugin-proposal-object-rest-spread": "^7.9.0",
+    "@babel/preset-env": "^7.9.0",
+    "@rollup/plugin-commonjs": "^11.0.2",
+    "@rollup/plugin-node-resolve": "^7.1.1",
     "autoprefixer": "^9.7.4",
     "clean-css-cli": "^4.3.0",
     "http-server": "^0.12.1",
     "node-sass": "^4.13.1",
     "npm-run-all": "^4.1.5",
-    "postcss-cli": "^7.1.0"
+    "postcss-cli": "^7.1.0",
+    "rollup": "^2.2.0",
+    "rollup-plugin-babel": "^4.4.0"
   },
-  "dependencies": {
-    "rollup": "^2.2.0"
-  }
+  "dependencies": {}
 }
