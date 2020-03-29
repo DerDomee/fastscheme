@@ -1,9 +1,9 @@
 
-const DEFAULT_THEMES = [{name: "Use Browser Default", class: ""},
-                        {name: "Light Theme", class: "force-theme-light"},
-                        {name: "Dark Theme", class: "force-theme-dark"},
-                        {name: "Black Theme", class: "force-theme-darkest"}
-                      ]
+const DEFAULT_THEMES = [
+  {name: "Use system preference (@prefers-color-scheme)", class: ""},
+  {name: "Light Theme", class: "force-theme-light"},
+  {name: "Dark Theme", class: "force-theme-dark"},
+  {name: "Black Theme", class: "force-theme-darkest"}]
 
 class Rescheme {
 
