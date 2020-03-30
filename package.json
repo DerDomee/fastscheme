@@ -2,7 +2,7 @@
   "name": "fastscheme",
   "version": "0.3.0",
   "description": "A lightweight HTML/CSS/JS Framework designed to make colorscheming easier",
-  "homepage": "https://dominikriedig.de/",
+  "homepage": "https://fastscheme.com",
   "main": "dist/js/fastscheme.js",
   "scripts": {
     "css": "npm-run-all css-compile css-autoprefix css-minify",
@@ -17,22 +17,23 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@gitlab.dominikriedig.de:DerDomee/fastscheme.git"
+    "url": "git+https://github.com/DerDomee/fastscheme.git"
   },
   "bugs": {
-    "url": "https://gitlab.dominikriedig.de/DerDomee/fastscheme/issues"
+    "url": "https://github.com/DerDomee/fastscheme/issues"
   },
   "keywords": [
     "css",
     "scss",
+    "sass",
     "framework",
+    "front-end",
     "javascript",
     "responsive",
     "web",
-    "mobile-first",
-    "sass"
+    "mobile-first"
   ],
-  "author": "Dominik Riedig",
+  "author": "Fastscheme Authors (https://github.com/DerDomee/fastscheme/graphs/contributors)",
   "license": "MIT",
   "style": "dist/css/fastscheme.css",
   "scss": "src/scss/fastscheme.scss",
