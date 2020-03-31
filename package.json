@@ -15,6 +15,9 @@
     "serve": "http-server",
     "start": "npm-run-all css js serve"
   },
+  "contributors": [
+    "Dominik Riedig <fastscheme@dominikriedig.de>"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/DerDomee/fastscheme.git"
