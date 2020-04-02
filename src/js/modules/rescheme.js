@@ -1,3 +1,4 @@
+import {set_cookie, get_cookie} from './../utils/cookie'
 
 const DEFAULT_THEMES = [
   {name: "Use system preference (@prefers-color-scheme)", class: ""},
@@ -86,6 +87,13 @@ class Rescheme {
       clist.push(newtheme)
       node.className = clist.join(" ").trim()
     })
+    if (usecookie) {
+      if(newtheme === "" || newtheme === null) {
+        set_cookie("fs_theme", "", -1000)
+      } else {
+        set_cookie("fs_theme", newtheme, 1000)
+      }
+    }
   }
 }
 var _defaultdomelement = document.querySelectorAll("scheme-select")[0]
