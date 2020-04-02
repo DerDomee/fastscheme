@@ -1,5 +1,7 @@
 import {set_cookie, get_cookie} from './../utils/cookie'
 
+
+const SCHEME_COOKIE_NAME = "fs_theme"
 const DEFAULT_THEMES = [
   {name: "Use system preference (@prefers-color-scheme)", class: ""},
   {name: "Light Theme", class: "force-theme-light"},
@@ -39,10 +41,14 @@ class Rescheme {
 
   _setupDefaultSelector(arg1) {
     const element = arg1
+    var themecookie = get_cookie(SCHEME_COOKIE_NAME)
     var selector = document.createElement('select')
     element.appendChild(selector)
     DEFAULT_THEMES.forEach(function(theme) {
       var option = document.createElement('option')
+      if(theme.class === themecookie) {
+        option.setAttribute("selected", 1)
+      }
       option.appendChild(document.createTextNode(theme.name))
       option.setAttribute('theme-class', theme.class)
       selector.appendChild(option)
@@ -50,7 +56,7 @@ class Rescheme {
     selector.addEventListener("change", () => {
       var selIndex = selector.options[selector.selectedIndex]
       var indexClass = selIndex.getAttribute('theme-class')
-      this.changeTheme(indexClass)
+      Rescheme.changeTheme(indexClass)
     })
   }
 
@@ -66,7 +72,10 @@ class Rescheme {
     try {
       return element instanceof HTMLElement
     } catch(e) {
-      return (typeof element === "object") && (element.nodeType === 1) && (typeof element.style === "object") && (typeof element.ownerDocument === "object")
+      return ((typeof element === "object") &&
+              (element.nodeType === 1) &&
+              (typeof element.style === "object") &&
+              (typeof element.ownerDocument === "object"))
     }
   }
 
@@ -76,7 +85,7 @@ class Rescheme {
     *
     * @param {string} arg1 newtheme: Name of the new theme-class to add. Use null or empty string to reset the theme.
     */
-  changeTheme(arg1, arg2 = true) {
+  static changeTheme(arg1, arg2 = true) {
     const newtheme = arg1, usecookie = arg2
     document.querySelectorAll('*').forEach(function(node) {
       var classes = node.className
@@ -89,15 +98,21 @@ class Rescheme {
     })
     if (usecookie) {
       if(newtheme === "" || newtheme === null) {
-        set_cookie("fs_theme", "", -1000)
+        set_cookie(SCHEME_COOKIE_NAME, "", -1000)
       } else {
-        set_cookie("fs_theme", newtheme, 1000)
+        set_cookie(SCHEME_COOKIE_NAME, newtheme, 1000)
       }
     }
   }
 }
 var _defaultdomelement = document.querySelectorAll("scheme-select")[0]
 new Rescheme(_defaultdomelement, null)
+document.addEventListener("DOMContentLoaded", function() {
+  var themecookie = get_cookie(SCHEME_COOKIE_NAME)
+  if (themecookie !== "" && themecookie !== null && themecookie.startsWith("force-theme-")) {
+    Rescheme.changeTheme(themecookie, false)
+  }
+})
 
 export {
   Rescheme
