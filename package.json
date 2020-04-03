@@ -1,6 +1,6 @@
 {
   "name": "fastscheme",
-  "version": "0.3.0",
+  "version": "0.3.1",
   "description": "A lightweight HTML/CSS/JS Framework designed to make colorscheming easier",
   "homepage": "https://fastscheme.com",
   "main": "dist/js/fastscheme.js",
