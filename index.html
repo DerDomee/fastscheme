@@ -32,10 +32,7 @@
     <main class="container">
       <h1 id="site-caption">Fastscheme: A lightweight CSS framework inspired by Bootstrap</h1>
       <p>
-        Fastscheme ist ein Mobile-First CSS-Framework von mir (<a href="https://dominikriedig.de/main/">Dominik Riedig</a>), das es Entwicklern und Designern ermöglicht, super schnell und einfach mehrere Colorschemes einzubinden und diese on-the-fly zu wechseln. Nativer Support für <code>prefers-color-scheme</code> sowie Scheme-Overrides sind aber nur zwei von vielen Kernfeatures.
-      </p>
-      <p>
-        Das Framework ist aktuell offensichtlich in der Entwicklung: Bisher funktioniert <i>ausschließlich</i> eine rudimentäre Version der Navigation-Bar und das Color-Scheming. Jegliche Komponenten, Typographie, Designelemente und weitere Funktionen fehlen noch komplett. Der aktuelle Entwicklungsstand lässt sich <i>(bald)</i> auf <a href="https://gitlab.dominikriedig.de">meiner GitLab-Instanz</a> nachvollziehen.
+        Fastscheme is a mobile-first CSS framework that enables developers and designers to quickly and easily integrate multiple color schemes and change them on the fly. Native support for <code>prefers-color-scheme</code> and schemeoverrides are two of the core features.
       </p>
 
       <p class="align-left">
@@ -65,26 +62,26 @@
       <table>
         <thead>
           <tr>
-            <th>Überschrift 1</th>
-            <th>Überschrift 2</th>
-            <th>Überschrift 3</th>
-            <th>Überschrift 4</th>
-            <th>Überschrift 5</th>
+            <th>Heading 1</th>
+            <th>Heading 2</th>
+            <th>Heading 3</th>
+            <th>Heading 4</th>
+            <th>Heading 5</th>
           </tr>
         </thead>
           <tr>
-            <td>Reihe 1 Spalte 2</td>
-            <td>Reihe 1 Spalte 1</td>
-            <td>Reihe 1 Spalte 3</td>
-            <td>Reihe 1 Spalte 4</td>
-            <td>Reihe 1 Spalte 5</td>
+            <td>Row 1 Column 1</td>
+            <td>Row 1 Column 2</td>
+            <td>Row 1 Column 3</td>
+            <td>Row 1 Column 4</td>
+            <td>Row 1 Column 5</td>
           </tr>
           <tr>
-            <td>Reihe 2 Spalte 1</td>
-            <td>Reihe 2 Spalte 2</td>
-            <td>Reihe 2 Spalte 3</td>
-            <td>Reihe 2 Spalte 4</td>
-            <td>Reihe 2 Spalte 5</td>
+            <td>Row 2 Column 1</td>
+            <td>Row 2 Column 2</td>
+            <td>Row 2 Column 3</td>
+            <td>Row 2 Column 4</td>
+            <td>Row 2 Column 5</td>
           </tr>
         <tbody>
 
@@ -108,11 +105,12 @@
         <input class="input__field custom--radio" type="radio" name="radio-test" id="radio-test-option2">
         <label class="input__label" for="radio-test-option2">Checkboxlabel</label>
       </div>
-      <h2>Farbthema ändern</h2>
+      <h2>Change color scheme</h2>
+      <p>Changing the color scheme only works when using full-featured fastscheme. Using  <code>fastscheme-nooverrides</code> disables the scheme-overriding and always defaults to the use of @prefers-color-scheme (which defaults - per default - to dark mode). This needs more defaults.</p>
       <scheme-select></scheme-select>
     </main>
     <footer>
-      <a href="https://dominikriedig.de/main/imprint/">Impressum (Die verlinkte Seite kann kein Dark-Theme, Achtung!)</a>
+      <p>This could be a footer section, but there's nothing here. Poor footer.</p>
     </footer>
 
     <script type="text/javascript" src="/dist/js/fastscheme.js" ></script>
