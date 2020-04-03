@@ -84,16 +84,19 @@ class Rescheme {
     * then add none or one new 'force-theme-*' class to toggle a theme.
     *
     * @param {string} arg1 newtheme: Name of the new theme-class to add. Use null or empty string to reset the theme.
+    * @param {boolean} arg2 usecookie: If the scheme change should be saved in a persistent cookie that loads the selected scheme on page reload
+    * @param {boolean} arg3 animatetransition: If the transition should be animated
     */
-  static changeTheme(arg1, arg2 = true) {
-    const newtheme = arg1, usecookie = arg2
+  static changeTheme(arg1, arg2 = true, arg3 = true) {
+    const newtheme = arg1, usecookie = arg2, animatetransition = arg3
     document.querySelectorAll('*').forEach(function(node) {
       var classes = node.className
       var classprefix = "force-theme-"
-      var clist = classes.split(" ").filter(function (c){
+      var clist = classes.split(" ").filter(function (c) {
         return c.lastIndexOf(classprefix, 0) !== 0
       })
       clist.push(newtheme)
+      if(animatetransition) clist.push("theme-scheme-animate")
       node.className = clist.join(" ").trim()
     })
     if (usecookie) {
@@ -103,6 +106,18 @@ class Rescheme {
         set_cookie(SCHEME_COOKIE_NAME, newtheme, 1000)
       }
     }
+    if(animatetransition) {
+      setTimeout(function () {
+        document.querySelectorAll('*').forEach(function(node) {
+          var classes = node.className
+          var classprefix = "theme-scheme-animate"
+          var clist = classes.split(" ").filter(function (c) {
+            return c.lastIndexOf(classprefix, 0) !== 0
+          })
+          node.className = clist.join(" ").trim()
+        })
+      }, 500)
+    }
   }
 }
 var _defaultdomelement = document.querySelectorAll("scheme-select")[0]
@@ -110,7 +125,7 @@ new Rescheme(_defaultdomelement, null)
 document.addEventListener("DOMContentLoaded", function() {
   var themecookie = get_cookie(SCHEME_COOKIE_NAME)
   if (themecookie !== "" && themecookie !== null && themecookie.startsWith("force-theme-")) {
-    Rescheme.changeTheme(themecookie, false)
+    Rescheme.changeTheme(themecookie, false, false)
   }
 })
 

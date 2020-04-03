@@ -26,3 +26,10 @@ a {
 [hidden] {
   display: none !important;
 }
+
+.theme-scheme-animate {
+  transition: color 500ms ease-in-out,
+              background-color 500ms ease-in-out,
+              border 500ms ease-in-out,
+              shadow 500ms ease-in-out;
+}
