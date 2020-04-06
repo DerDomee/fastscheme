@@ -79,8 +79,8 @@ code {
   }
 }
 
-codeblock,
-pre {
+pre,
+.codeblock {
   display: block;
   white-space: pre-wrap;
   font-family: monospace;
