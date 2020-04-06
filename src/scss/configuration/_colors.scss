@@ -21,6 +21,7 @@ $color-07: rgba(192,  57,  43, 1);    // Highlight Color #2
 
 
 //         Color usage matrix:         LIGHT THEME:             DARK THEME:              DARKEST THEME:                   COLOR DESCRIPTION:
+               $c-transparent:         transparent,             transparent,             transparent;                  // Transparent
            $c-body-background:         $white-00,               $black-02,               $black-00;                    // Common Background-Color for the whole document
                  $c-body-text:         $black-01,               $white-01,               $white-00;                    // Common Text-Color for the whole document
 
@@ -73,3 +74,6 @@ $color-07: rgba(192,  57,  43, 1);    // Highlight Color #2
                     $table-bg:         $white-02,               $black-02,               $black-02;                    // Table Background-Color
           $table-alternate-bg:         $white-01,               $black-03,               $black-03;                    // Table Alternating Background-Color
                   $table-text:         $black-01,               $white-01,               $white-00;                    // Table Text-Color
+
+                 $c-select-bg:         $white-02,               $black-03,               $black-02;                    // Select Input Background-Color
+               $c-select-text:         $black-01,               $white-01,               $white-00;                    // Select Input Text-Color
