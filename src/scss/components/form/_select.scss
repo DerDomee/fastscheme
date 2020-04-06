@@ -11,6 +11,7 @@
     appearance: none;
     border: none;
     height: 100%;
+    max-width: 100%;
     background-color: transparent;
     @include colorselect(color, $c-select-text)
     padding-right: 1.5rem;
