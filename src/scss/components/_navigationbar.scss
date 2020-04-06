@@ -97,6 +97,10 @@ nav {
         }
 
         &.active {
+          a {
+            @include colorselect(color, $c-navitem-active-text);
+          }
+          
           &:hover,
           &:focus {
             @include colorselect(background-color, $c-navitem-hovact-bg);
@@ -107,9 +111,6 @@ nav {
           }
           @include colorselect(background-color, $c-navitem-active-bg);
           @include colorselect(color, $c-navitem-active-text);
-          a {
-            @include colorselect(color, $c-navitem-active-text);
-          }
         }
       }
 
