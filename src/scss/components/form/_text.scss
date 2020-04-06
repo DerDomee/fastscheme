@@ -1,0 +1,11 @@
+.input__wrapper>.input__field {
+  &[type=text],
+  &[type=password] {
+    margin: 0;
+    height: 100%;
+    font-size: 1rem;
+    padding: 0 .3rem;
+    line-height: $wrapper-height;
+    border: 0;
+  }
+}

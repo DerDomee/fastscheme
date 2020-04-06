@@ -1,0 +1,29 @@
+.input__wrapper>.input__field {
+  &[type=checkbox] {
+    &.custom--checkbox {
+      display: none;
+      visibility: hidden;
+      &+label {
+        &::before {
+          content: " ";
+          cursor: pointer;
+          border-radius: 2px;
+          border: 1px solid white;
+          display: inline-block;
+          background-color: red;
+          margin-right: .5rem;
+          height: 1rem;
+          width: 1rem;
+        }
+      }
+
+      &:checked {
+        &+label::before {
+          content: " ";
+          background-color: green;
+        }
+      }
+
+    }
+  }
+}
