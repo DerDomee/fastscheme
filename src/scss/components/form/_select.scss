@@ -1,0 +1,30 @@
+.select__wrapper {
+  display: inline-flex;
+  height: $wrapper-height;
+  min-height: $wrapper-height;
+  line-height: $wrapper-height;
+  background-color: $black-03;
+  width: auto;
+  position: relative;
+  &>select {
+    appearance: none;
+    border: none;
+    height: 100%;
+    background-color: transparent;
+    outline: none;
+    color: $white-01;
+    padding-right: 1.5rem;
+    &:focus,
+    &:hover {
+      outline: none;
+    }
+  }
+  &:before {
+    content: "\25BE";
+    padding: 0 .6rem;
+    pointer-events: none;
+    position: absolute;
+    right: 0px;
+    top: 0px;
+  }
+}

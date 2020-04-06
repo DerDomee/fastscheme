@@ -1,6 +1,10 @@
 .input__wrapper>.input__field {
   &[type=text],
-  &[type=password] {
+  &[type=password],
+  &[type=email],
+  &[type=url],
+  &[type=tel],
+  &[type=number] {
     margin: 0;
     height: 100%;
     font-size: 1rem;

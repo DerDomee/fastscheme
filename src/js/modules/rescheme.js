@@ -42,8 +42,11 @@ class Rescheme {
   _setupDefaultSelector(arg1) {
     const element = arg1
     var themecookie = get_cookie(SCHEME_COOKIE_NAME)
+    var selectorwrapper = document.createElement('div')
+    selectorwrapper.className = (selectorwrapper.className + " select__wrapper").trim()
     var selector = document.createElement('select')
-    element.appendChild(selector)
+    element.appendChild(selectorwrapper)
+    selectorwrapper.appendChild(selector)
     DEFAULT_THEMES.forEach(function(theme) {
       var option = document.createElement('option')
       if(theme.class === themecookie) {
