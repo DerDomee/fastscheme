@@ -13,7 +13,7 @@
     height: 100%;
     max-width: 100%;
     background-color: transparent;
-    @include colorselect(color, $c-select-text)
+    @include colorselect(color, $c-select-text);
     padding-right: 1.5rem;
     padding-left: .2rem;
     outline: none;
@@ -22,8 +22,12 @@
       outline: none;
     }
     &:-moz-focusring {
-      @include colorselect(color, $c-transparent)
-      @include colorselect(text-shadow, $c-select-text, "0 0 0")
+      @include colorselect(color, $c-transparent);
+      @include colorselect(text-shadow, $c-select-text, "0 0 0");
+    }
+    & option {
+      @include colorselect(color, $c-select-text);
+      @include colorselect(background-color, $c-select-bg);
     }
   }
   &:before {
