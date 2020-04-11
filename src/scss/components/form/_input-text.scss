@@ -1,15 +1,28 @@
-.input__wrapper>.input__field {
-  &[type=text],
-  &[type=password],
-  &[type=email],
-  &[type=url],
-  &[type=tel],
-  &[type=number] {
+.input__wrapper {
+
+  display: inline-flex;
+  height: $wrapper-height;
+  line-height: $wrapper-height;
+  padding: 0;
+
+  &>input[type=text],
+  &>input[type=password],
+  &>input[type=email],
+  &>input[type=url],
+  &>input[type=tel],
+  &>input[type=number] {
     margin: 0;
     height: 100%;
     font-size: 1rem;
     padding: 0 .3rem;
-    line-height: $wrapper-height;
     border: 0;
+  }
+
+  &>label {
+    margin: 0;
+    height: 100%;
+    border-radius: 0;
+    padding: 0 .3rem;
+    line-height: $wrapper-height;
   }
 }

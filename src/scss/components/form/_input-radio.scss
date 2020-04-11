@@ -1,26 +1,29 @@
-.input__wrapper>.input__field {
-  &[type=radio] {
-    &.custom--radio {
-      display: none;
-      visibility: hidden;
-      &+label {
-        &::before {
-          content: " ";
-          cursor: pointer;
-          border-radius: 100%;
-          border: 1px solid white;
-          display: inline-block;
-          background-color: red;
-          margin-right: .5rem;
-          height: 1rem;
-          width: 1rem;
-        }
-      }
-      &:checked {
-        &+label::before {
-          content: " ";
-          background-color: green;
-        }
+.radio__wrapper {
+
+  display: inline-flex;
+  height: $wrapper-height;
+  line-height: $wrapper-height;
+  padding: 0;
+
+  &>input[type=radio] {
+    display: none;
+    visibility: hidden;
+    &+label::before {
+      content: " ";
+      cursor: pointer;
+      border-radius: 100%;
+      border: 1px solid white;
+      display: inline-block;
+      background-color: red;
+      margin-right: .5rem;
+      height: 1rem;
+      width: 1rem;
+    }
+
+    &:checked {
+      &+label::before {
+        content: " ";
+        background-color: green;
       }
     }
   }
