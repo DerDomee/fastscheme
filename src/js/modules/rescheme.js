@@ -1,4 +1,5 @@
-import {set_cookie, get_cookie} from './../utils/cookie'
+import { set_cookie, get_cookie } from './../utils/cookie'
+import { isDomElement } from './../utils/domutils'
 
 
 const SCHEME_COOKIE_NAME = "fs_theme"
@@ -12,8 +13,6 @@ const DEFAULT_THEMES = [
   * Rescheme Class providing the selector for scheme-overrides.
   * The function of @prefers-color-scheme works without any javascript,
   * this class only exists for manual overriding of the theme by the user.
-  *
-  *
   */
 class Rescheme {
 
@@ -29,7 +28,7 @@ class Rescheme {
     */
   constructor(arg1, arg2) {
     const element = arg1, config = arg2
-    if(element === null || !this._isDomElement(element)) {
+    if(element === null || ! isDomElement(element)) {
       throw new Error("IllegalArgument - arg1 is not a DOM element")
     }
     if(config === null) {
@@ -43,7 +42,8 @@ class Rescheme {
     const element = arg1
     var themecookie = get_cookie(SCHEME_COOKIE_NAME)
     var selectorwrapper = document.createElement('div')
-    selectorwrapper.className = (selectorwrapper.className + " select__wrapper").trim()
+    selectorwrapper.className = (selectorwrapper.className
+                                 + " select__wrapper").trim()
     var selector = document.createElement('select')
     element.appendChild(selectorwrapper)
     selectorwrapper.appendChild(selector)
@@ -69,18 +69,6 @@ class Rescheme {
                     "in this Version yet!");
   }
 
-  //TODO: Move this function into new js file DomUtils
-  _isDomElement(arg1) {
-    const element = arg1
-    try {
-      return element instanceof HTMLElement
-    } catch(e) {
-      return ((typeof element === "object") &&
-              (element.nodeType === 1) &&
-              (typeof element.style === "object") &&
-              (typeof element.ownerDocument === "object"))
-    }
-  }
 
   /**
     * Remove every 'force-theme-*' class from every element in the DOM,
@@ -127,7 +115,9 @@ var _defaultdomelement = document.querySelectorAll("scheme-select")[0]
 new Rescheme(_defaultdomelement, null)
 document.addEventListener("DOMContentLoaded", function() {
   var themecookie = get_cookie(SCHEME_COOKIE_NAME)
-  if (themecookie !== "" && themecookie !== null && themecookie.startsWith("force-theme-")) {
+  if (themecookie !== "" &&
+      themecookie !== null &&
+      themecookie.startsWith("force-theme-")) {
     Rescheme.changeTheme(themecookie, false, false)
   }
 })
