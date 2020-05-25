@@ -1,6 +1,6 @@
 // Color Definition
 $white-00: rgba(255, 255, 255, 1);
-$white-01: rgba(240, 240, 240, 1);
+$white-01: rgba(230, 230, 230, 1);
 $white-02: rgba(190, 190, 190, 1);
 $white-03: rgba(150, 150, 150, 1);
 $white-04: rgba(100, 100, 100, 1);
@@ -71,8 +71,8 @@ $color-07: rgba(192,  57,  43, 1);    // Highlight Color #2
       $button-danger-hover-bg:  darken($color-05, 10%), lighten($color-05, 10%), lighten($color-05, 10%);              // Danger Button Hover Background-Color
           $button-danger-text:         $black-01,               $white-01,               $white-00;                    // Danger Button Text-Color
 
-                  $c-table-bg:         $white-02,               $black-02,               $black-02;                    // Table Background-Color
-        $c-table-alternate-bg:         $white-01,               $black-03,               $black-03;                    // Table Alternating Background-Color
+                  $c-table-bg:         $white-00,               $black-02,               $black-00;                    // Table Background-Color
+        $c-table-alternate-bg:         $white-01,               $black-03,               $black-01;                    // Table Alternating Background-Color
                 $c-table-text:         $black-01,               $white-01,               $white-00;                    // Table Text-Color
 
                  $c-select-bg:         $white-02,               $black-03,               $black-02;                    // Select Input Background-Color
