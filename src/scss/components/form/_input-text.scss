@@ -16,6 +16,8 @@
     font-size: 1rem;
     padding: 0 .3rem;
     border: 0;
+    @include colorselect(color, $c-select-text);
+    @include colorselect(background-color, $c-select-bg);
   }
 
   &>label {
