@@ -3,7 +3,7 @@ const set_cookie = function (arg1, arg2, arg3) {
   var d = new Date();
   d.setTime(d.getTime() + (expiry*24*60*60*1000));
   var expires = "expires="+ d.toUTCString();
-  document.cookie = key + "=" + value + ";" + expiry + ";path=/";
+  document.cookie = key + "=" + value + ";" + expires + ";path=/;secure";
 }
 
 const get_cookie = function (arg1) {
