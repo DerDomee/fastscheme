@@ -69,6 +69,56 @@ class Rescheme {
                     "in this Version yet!");
   }
 
+  /**
+    * Helper function for `changeTheme`
+    */
+  static _startThemeChangeTransition() {
+    document.querySelectorAll('*').forEach(function(node) {
+      var classes = node.className
+      var clist = classes.split(" ")
+      clist.push("theme-scheme-animate")
+      node.className = clist.join(" ").trim()
+    })
+  }
+
+  /**
+    * Helper function for `changeTheme`
+    */
+  static _stopThemeChangeTransition() {
+    document.querySelectorAll('*').forEach(function(node) {
+      var classes = node.className
+      var animationClassName = "theme-scheme-animate"
+      var clist = classes.split(" ").filter(function (c) {
+        return c.lastIndexOf(animationClassName, 0) !== 0
+      })
+      node.className = clist.join(" ").trim()
+    })
+  }
+
+  /**
+    * Helper function for `changeTheme`
+    */
+  static _setThemeClass(node, newtheme) {
+    var classes = node.className
+    var classprefix = "force-theme"
+    var clist = classes.split(" ").filter(function (c) {
+      return c.lastIndexOf(classprefix, 0) !== 0
+    })
+    clist.push(newtheme)
+    node.className = clist.join(" ").trim()
+  }
+
+  /**
+    * Helper function for `changeTheme`
+    */
+  static _setThemeCookie(themeName) {
+    if(themeName === "" || themeName === null) {
+      set_cookie(SCHEME_COOKIE_NAME, "", -1000)
+    } else {
+      set_cookie(SCHEME_COOKIE_NAME, themeName, 1000)
+    }
+  }
+
 
   /**
     * Remove every 'force-theme-*' class from every element in the DOM,
@@ -79,52 +129,20 @@ class Rescheme {
     * @param {boolean} arg3 animatetransition: If the transition should be animated
     */
   static changeTheme(arg1, arg2 = true, arg3 = true) {
-    console.log("Changing theme...");
     const newtheme = arg1, usecookie = arg2, animatetransition = arg3
-    if(animatetransition) {
-      console.log("  Changing theme with animated transition...");
-      document.querySelectorAll('*').forEach(function(node) {
-        var classes = node.className
-        var clist = classes.split(" ")
-        clist.push("theme-scheme-animate")
-        node.className = clist.join(" ").trim()
-      })
-      console.log("  Animation initialized!");
-    }
-    console.log("  Changing the actual theme now...");
-    var rootnode = document.querySelector(':root')
-    var root_classes = rootnode.className
-    var root_classprefix = "force-theme"
-    var root_clist = root_classes.split(" ").filter(function (c) {
-      return c.lastIndexOf(root_classprefix, 0) !== 0
-    })
-    root_clist.push(newtheme)
-    rootnode.className = root_clist.join(" ").trim()
-    console.log("  Successfully changed the actual theme!");
 
-    if (usecookie) {
-      console.log("  Changing theme cookie...");
-      if(newtheme === "" || newtheme === null) {
-        set_cookie(SCHEME_COOKIE_NAME, "", -1000)
-      } else {
-        set_cookie(SCHEME_COOKIE_NAME, newtheme, 1000)
-      }
-      console.log("  Changed theme cookie!");
-    }
-    if(animatetransition) {
-      setTimeout(function () {
-        document.querySelectorAll('*').forEach(function(node) {
-          var classes = node.className
-          var classprefix = "theme-scheme-animate"
-          var clist = classes.split(" ").filter(function (c) {
-            return c.lastIndexOf(classprefix, 0) !== 0
-          })
-          node.className = clist.join(" ").trim()
-        })
-      }, 500)
-    }
+    if(animatetransition) Rescheme._startThemeChangeTransition()
+
+    var rootnode = document.querySelector(':root')
+    Rescheme._setThemeClass(rootnode, newtheme)
+
+    if (usecookie) Rescheme._setThemeCookie(newtheme)
+
+    if(animatetransition) setTimeout(Rescheme._stopThemeChangeTransition, 500)
   }
 }
+
+
 var _defaultdomelement = document.querySelectorAll("scheme-select")[0]
 new Rescheme(_defaultdomelement, null)
 document.addEventListener("DOMContentLoaded", function() {
