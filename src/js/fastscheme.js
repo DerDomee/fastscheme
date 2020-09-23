@@ -4,5 +4,6 @@ import { HeadingAnchor } from './modules/headings'
 
 export {
   NavbarBurger,
+  HeadingAnchor,
   Rescheme
 }
