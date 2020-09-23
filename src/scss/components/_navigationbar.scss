@@ -9,9 +9,9 @@ nav {
   border: 0px;
   padding: 0;
   box-sizing: content-box;
-  background-color: var(--nav-background);
-  color: var(--nav-text);
-  border-bottom: 1px solid var(--nav-border);
+  background-color: var(--c-nav-background);
+  color: var(--c-nav-text);
+  border-bottom: 1px solid var(--c-nav-border);
 
   .nav-content {
     display: flex;
@@ -32,7 +32,7 @@ nav {
         width: 25px;
         height: 2px;
         margin: 4px 0;
-        background-color: var(--nav-text);
+        background-color: var(--c-nav-text);
       }
     }
 
@@ -62,16 +62,16 @@ nav {
       max-height: 0;
       overflow-y: hidden;
       transition: max-height 500ms;
-      background-color: var(--nav-background);
+      background-color: var(--c-nav-background);
       border-bottom: 0;
       &.opened {
         max-height: 100vh;
-        border-bottom: 1px solid var(--nav-border);
+        border-bottom: 1px solid var(--c-nav-border);
       }
 
       li {
-        background-color: var(--nav-background);
-        color: var(--nav-text);
+        background-color: var(--c-nav-background);
+        color: var(--c-nav-text);
         width: 100%;
         text-align: center;
         transition: background-color 100ms, color 100ms;
@@ -84,34 +84,34 @@ nav {
           width: 100%;
           box-sizing: border-box;
           color: inherit;
-          color: var(--nav-text);
+          color: var(--c-nav-text);
         }
 
         &:hover,
         &:focus {
           text-decoration: none;
-          background-color: var(--navitem-hover-bg);
-          color: var(--navitem-hover-text);
+          background-color: var(--c-navitem-hover-bg);
+          color: var(--c-navitem-hover-text);
           a {
-            color: var(--navitem-hover-text);
+            color: var(--c-navitem-hover-text);
           }
         }
 
         &.active {
           a {
-            color: var(--navitem-active-text);
+            color: var(--c-navitem-active-text);
           }
 
           &:hover,
           &:focus {
-            background-color: var(--navitem-hovact-bg);
-            color: var(--navitem-hovact-text);
+            background-color: var(--c-navitem-hovact-bg);
+            color: var(--c-navitem-hovact-text);
             a {
-              color: var(--navitem-hovact-text);
+              color: var(--c-navitem-hovact-text);
             }
           }
-          background-color: var(--navitem-active-bg);
-          color: var(--navitem-active-text);
+          background-color: var(--c-navitem-active-bg);
+          color: var(--c-navitem-active-text);
         }
       }
 

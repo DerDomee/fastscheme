@@ -69,8 +69,8 @@ main {
 
 code {
   font-family: monospace;
-  background-color: var(--codeblock-bg);
-  color: var(--codeblock-text);
+  background-color: var(--c-codeblock-bg);
+  color: var(--c-codeblock-text);
   border-radius: 0.1rem;
   padding: 2px;
   &.block {
@@ -84,8 +84,8 @@ pre,
   display: block;
   white-space: pre-wrap;
   font-family: monospace;
-  background-color: var(--codeblock-bg);
-  color: var(--codeblock-text);
+  background-color: var(--c-codeblock-bg);
+  color: var(--c-codeblock-text);
   border-radius: 0.2rem;
   padding: 2px;
 }

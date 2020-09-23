@@ -3,8 +3,8 @@
   height: $wrapper-height;
   min-height: $wrapper-height;
   line-height: $wrapper-height;
-  background-color: var(--select-bg);
-  color: var(--select-text);
+  background-color: var(--c-select-bg);
+  color: var(--c-select-text);
   width: auto;
   position: relative;
   &>select {
@@ -13,7 +13,7 @@
     height: 100%;
     max-width: 100%;
     background-color: transparent;
-    color: var(--select-text);
+    color: var(--c-select-text);
     padding-right: 1.5rem;
     padding-left: .2rem;
     outline: none;
@@ -22,12 +22,12 @@
       outline: none;
     }
     &:-moz-focusring {
-      color: var(--transparent);
-      text-shadow: 0 0 0 var(--select-text)
+      color: var(--c-transparent);
+      text-shadow: 0 0 0 var(--c-select-text)
     }
     & option {
-    background-color: var(--select-bg);
-    color: var(--select-text);
+    background-color: var(--c-select-bg);
+    color: var(--c-select-text);
     }
   }
   &:before {

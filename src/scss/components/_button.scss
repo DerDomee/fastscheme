@@ -19,52 +19,52 @@ div.button {
   }
 
   &.btn--primary {
-    background-color: var(--button-primary-bg);
-    color: var(--button-primary-text);
-    border-color: var(--button-primary-border);
+    background-color: var(--c-button-primary-bg);
+    color: var(--c-button-primary-text);
+    border-color: var(--c-button-primary-border);
 
     &:hover {
-      background-color: var(--button-primary-hover-bg);
+      background-color: var(--c-button-primary-hover-bg);
     }
   }
 
   &.btn--secondary {
-    background-color: var(--button-secondary-bg);
-    color: var(--button-secondary-text);
-    border-color: var(--button-secondary-border);
+    background-color: var(--c-button-secondary-bg);
+    color: var(--c-button-secondary-text);
+    border-color: var(--c-button-secondary-border);
 
       &:hover {
-        background-color: var(--button-secondary-hover-bg);
+        background-color: var(--c-button-secondary-hover-bg);
       }
   }
 
   &.btn--success {
-    background-color: var(--button-success-bg);
-    color: var(--button-success-text);
-    border-color: var(--button-success-border);
+    background-color: var(--c-button-success-bg);
+    color: var(--c-button-success-text);
+    border-color: var(--c-button-success-border);
 
       &:hover {
-        background-color: var(--button-success-hover-bg);
+        background-color: var(--c-button-success-hover-bg);
       }
   }
 
   &.btn--warning {
-    background-color: var(--button-warning-bg);
-    color: var(--button-warning-text);
-    border-color: var(--button-warning-border);
+    background-color: var(--c-button-warning-bg);
+    color: var(--c-button-warning-text);
+    border-color: var(--c-button-warning-border);
 
       &:hover {
-        background-color: var(--button-warning-hover-bg);
+        background-color: var(--c-button-warning-hover-bg);
       }
   }
 
   &.btn--danger {
-    background-color: var(--button-danger-bg);
-    color: var(--button-danger-text);
-    border-color: var(--button-danger-border);
+    background-color: var(--c-button-danger-bg);
+    color: var(--c-button-danger-text);
+    border-color: var(--c-button-danger-border);
 
       &:hover {
-        background-color: var(--button-danger-hover-bg);
+        background-color: var(--c-button-danger-hover-bg);
       }
   }
 
