@@ -22,29 +22,29 @@ $color-07: rgba(192,  57,  43, 1);    // Highlight Color #2
 
 //         Color usage matrix:         LIGHT THEME:             DARK THEME:              DARKEST THEME:                   COLOR DESCRIPTION:
 $color-map: (
-               "transparent": [         transparent,             transparent,             transparent ],                  // Transparent
-           "body-background": [         $white-00,               $black-02,               $black-00 ],                    // Common Background-Color for the whole document
-                 "body-text": [         $black-01,               $white-01,               $white-00 ],                    // Common Text-Color for the whole document
+                 "transparent": [         transparent,             transparent,             transparent ],                  // Transparent
+             "body-background": [         $white-00,               $black-02,               $black-00 ],                    // Common Background-Color for the whole document
+                   "body-text": [         $black-01,               $white-01,               $white-00 ],                    // Common Text-Color for the whole document
 
-            "nav-background": [         $white-01,               $black-04,               $color-01 ],                    // Background-Color for Navigation Bar
-                  "nav-text": [         $black-01,               $white-01,               $white-00 ],                    // Common Text-Color for Navigation Bar
-                "nav-border": [         $white-02,               $white-04,        darken($color-01, 10%) ],              // Color of the bottom border of the Navigation Bar
-          "navitem-hover-bg": [         $color-01,               $color-01,        darken($color-01, 10%) ],              // Background-Color for hovererd/focused Navigation-Items
-         "navitem-active-bg": [  darken($color-01, 10%),  darken($color-01, 10%),  darken($color-01, 20%) ],              // Background-Color on active Navigation-Items
-         "navitem-hovact-bg": [  darken($color-01, 20%),  darken($color-01, 20%),  darken($color-01, 30%) ],              // Background-Color on active AND hovered/focused Navigation-Items
-        "navitem-hover-text": [         $black-01,               $white-01,               $white-00 ],                    // Text-Color for hovered/focused Navigation-Items
-       "navitem-active-text": [         $white-01,               $white-01,               $white-00 ],                    // Text-Color for active Navigation-Items
-       "navitem-hovact-text": [         $white-01,               $white-01,               $white-00 ],                    // Text-Color for active AND hovered/focused Navigation-Items
+              "nav-background": [         $white-01,               $black-04,               $color-01 ],                    // Background-Color for Navigation Bar
+                    "nav-text": [         $black-01,               $white-01,               $white-00 ],                    // Common Text-Color for Navigation Bar
+                  "nav-border": [         $white-02,               $white-04,        darken($color-01, 10%) ],              // Color of the bottom border of the Navigation Bar
+            "navitem-hover-bg": [         $color-01,               $color-01,        darken($color-01, 10%) ],              // Background-Color for hovererd/focused Navigation-Items
+           "navitem-active-bg": [  darken($color-01, 10%),  darken($color-01, 10%),  darken($color-01, 20%) ],              // Background-Color on active Navigation-Items
+           "navitem-hovact-bg": [  darken($color-01, 20%),  darken($color-01, 20%),  darken($color-01, 30%) ],              // Background-Color on active AND hovered/focused Navigation-Items
+          "navitem-hover-text": [         $black-01,               $white-01,               $white-00 ],                    // Text-Color for hovered/focused Navigation-Items
+         "navitem-active-text": [         $white-01,               $white-01,               $white-00 ],                    // Text-Color for active Navigation-Items
+         "navitem-hovact-text": [         $white-01,               $white-01,               $white-00 ],                    // Text-Color for active AND hovered/focused Navigation-Items
 
-                "link-color": [  darken($color-01, 10%),         $color-01,               $color-01 ],                    // Common <a>-Link Color
-          "link-hover-color": [         $color-01,        darken($color-01, 10%),  darken($color-01, 10%) ],              // Common <a>-Link Color for hovered elements
+                  "link-color": [  darken($color-01, 10%),         $color-01,               $color-01 ],                    // Common <a>-Link Color
+            "link-hover-color": [         $color-01,        darken($color-01, 10%),  darken($color-01, 10%) ],              // Common <a>-Link Color for hovered elements
 
-             "color-success": [         $color-03,               $color-03,               $color-03 ],                    // Success Color
-             "color-warning": [         $color-04,               $color-04,               $color-04 ],                    // Warning Color
-               "color-error": [         $color-05,               $color-05,               $color-05 ],                    // Error Color
+               "color-success": [         $color-03,               $color-03,               $color-03 ],                    // Success Color
+               "color-warning": [         $color-04,               $color-04,               $color-04 ],                    // Warning Color
+                 "color-error": [         $color-05,               $color-05,               $color-05 ],                    // Error Color
 
-              "codeblock-bg": [ lighten($color-06, 15%),         $black-03,               $black-01 ],                    // <code> Background-Color
-            "codeblock-text": [         $color-05,               $color-06,               $color-06 ],                    // <code> Text-Color
+                "codeblock-bg": [ lighten($color-06, 15%),         $black-03,               $black-01 ],                    // <code> Background-Color
+              "codeblock-text": [         $color-05,               $color-06,               $color-06 ],                    // <code> Text-Color
 
 
            "button-primary-bg": [         $color-01,               $color-01,               $color-01 ],                    // Primary Button Background-Color
@@ -72,12 +72,12 @@ $color-map: (
       "button-danger-hover-bg": [  darken($color-05, 10%), lighten($color-05, 10%), lighten($color-05, 10%) ],              // Danger Button Hover Background-Color
           "button-danger-text": [         $black-01,               $white-01,               $white-00 ],                    // Danger Button Text-Color
 
-                  "table-bg": [         $white-00,               $black-02,               $black-00 ],                    // Table Background-Color
-        "table-alternate-bg": [         $white-01,               $black-03,               $black-01 ],                    // Table Alternating Background-Color
-                "table-text": [         $black-01,               $white-01,               $white-00 ],                    // Table Text-Color
+                    "table-bg": [         $white-00,               $black-02,               $black-00 ],                    // Table Background-Color
+          "table-alternate-bg": [         $white-01,               $black-03,               $black-01 ],                    // Table Alternating Background-Color
+                  "table-text": [         $black-01,               $white-01,               $white-00 ],                    // Table Text-Color
 
-                 "select-bg": [         $white-02,               $black-03,               $black-02 ],                    // Select Input Background-Color
-               "select-text": [         $black-01,               $white-01,               $white-00 ],                    // Select Input Text-Color
+                   "select-bg": [         $white-02,               $black-03,               $black-02 ],                    // Select Input Background-Color
+                 "select-text": [         $black-01,               $white-01,               $white-00 ],                    // Select Input Text-Color
 
 );
 
