@@ -81,36 +81,48 @@ $color-map: (
 
 );
 
-
+// The "default" color scheme is dark mode, which is the second item in each
+// color variable list
 :root {
   @each $key, $value in $color-map {
-    --#{$key}: #{nth($value, 2)};
+    --c-#{$key}: #{nth($value, 2)};
   }
 }
 
-
+// If the user agent supports the color scheme media query and actively
+// requests light theme, then use it instead with the first item in each
+// color variable list
 @media(prefers-color-scheme: light) {
   :root {
     @each $key, $value in $color-map {
-      --#{$key}: #{nth($value, 1)};
+      --c-#{$key}: #{nth($value, 1)};
     }
   }
 }
 
+// If the user agent activated the light theme in the scheme-switcher,
+// a class is set on the root element. It corresponds to the first item in each
+// color variable list
 .force-theme-light {
   @each $key, $value in $color-map {
-    --#{$key}: #{nth($value, 1)};
+    --c-#{$key}: #{nth($value, 1)};
   }
 }
 
+// If the user agent activated the dark theme in the scheme-switcher,
+// a class is set on the root element. It corresponds to the second item in
+// each color variable list
 .force-theme-dark {
   @each $key, $value in $color-map {
-    --#{$key}: #{nth($value, 2)};
+    --c-#{$key}: #{nth($value, 2)};
   }
 }
 
+// If the user agent activated the "darkest" theme in the scheme-switcher,
+// a class is set on the root element. It corresponds to the third item in
+// each color variable list
 .force-theme-darkest {
   @each $key, $value in $color-map {
-    --#{$key}: #{nth($value, 3)};
+    --c-#{$key}: #{nth($value, 3)};
   }
 }
