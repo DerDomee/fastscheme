@@ -19,52 +19,52 @@ div.button {
   }
 
   &.btn--primary {
-    @include colorselect(background-color, $button-primary-bg);
-    @include colorselect(color, $button-primary-text);
-    @include colorselect(border-color, $button-primary-border);
+    background-color: var(--c-button-primary-bg);
+    color: var(--c-button-primary-text);
+    border-color: var(--c-button-primary-border);
 
     &:hover {
-      @include colorselect(background-color, $button-primary-hover-bg);
+      background-color: var(--c-button-primary-hover-bg);
     }
   }
 
   &.btn--secondary {
-      @include colorselect(background-color, $button-secondary-bg);
-      @include colorselect(color, $button-secondary-text);
-      @include colorselect(border-color, $button-secondary-border);
+    background-color: var(--c-button-secondary-bg);
+    color: var(--c-button-secondary-text);
+    border-color: var(--c-button-secondary-border);
 
       &:hover {
-        @include colorselect(background-color, $button-secondary-hover-bg);
+        background-color: var(--c-button-secondary-hover-bg);
       }
   }
 
   &.btn--success {
-      @include colorselect(background-color, $button-success-bg);
-      @include colorselect(color, $button-success-text);
-      @include colorselect(border-color, $button-success-border);
+    background-color: var(--c-button-success-bg);
+    color: var(--c-button-success-text);
+    border-color: var(--c-button-success-border);
 
       &:hover {
-        @include colorselect(background-color, $button-success-hover-bg);
+        background-color: var(--c-button-success-hover-bg);
       }
   }
 
   &.btn--warning {
-      @include colorselect(background-color, $button-warning-bg);
-      @include colorselect(color, $button-warning-text);
-      @include colorselect(border-color, $button-warning-border);
+    background-color: var(--c-button-warning-bg);
+    color: var(--c-button-warning-text);
+    border-color: var(--c-button-warning-border);
 
       &:hover {
-        @include colorselect(background-color, $button-warning-hover-bg);
+        background-color: var(--c-button-warning-hover-bg);
       }
   }
 
   &.btn--danger {
-      @include colorselect(background-color, $button-danger-bg);
-      @include colorselect(color, $button-danger-text);
-      @include colorselect(border-color, $button-danger-border);
+    background-color: var(--c-button-danger-bg);
+    color: var(--c-button-danger-text);
+    border-color: var(--c-button-danger-border);
 
       &:hover {
-        @include colorselect(background-color, $button-danger-hover-bg);
+        background-color: var(--c-button-danger-hover-bg);
       }
   }
 

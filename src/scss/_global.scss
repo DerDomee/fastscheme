@@ -8,8 +8,8 @@ body {
   margin: 0;
   padding: 0;
   min-height: 100%;
-  @include colorselect(background-color, $c-body-background);
-  @include colorselect(color, $c-body-text);
+  background-color: var(--c-body-background);
+  color: var(--c-body-text)
 }
 
 a {
@@ -17,9 +17,9 @@ a {
   transition: all 0.1s;
   &:hover {
     text-decoration: underline;
-    @include colorselect(color, $c-link-hover-color);
+    color: var(--c-link-hover-color);
   }
-  @include colorselect(color, $c-link-color);
+  color: var(--c-link-color);
 }
 
 // Always hide an element with the 'hidden' HTML attribute
