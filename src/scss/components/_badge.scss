@@ -4,28 +4,28 @@
   border-radius: 5px;
 
   &.badge--primary {
-    @include colorselect(background-color, $button-primary-bg);
-    @include colorselect(color, $button-primary-text);
+    background-color: var(--c-button-primary-bg);
+    color: var(--c-button-primary-text);
   }
 
   &.badge--secondary {
-      @include colorselect(background-color, $button-secondary-bg);
-      @include colorselect(color, $button-secondary-text);
+      background-color: var(--c-button-secondary-bg);
+      color: var(--c-button-secondary-text);
   }
 
   &.badge--success {
-      @include colorselect(background-color, $button-success-bg);
-      @include colorselect(color, $button-success-text);
+      background-color: var(--c-button-success-bg);
+      color: var(--c-button-success-text);
   }
 
   &.badge--warning {
-      @include colorselect(background-color, $button-warning-bg);
-      @include colorselect(color, $button-warning-text);
+      background-color: var(--c-button-warning-bg);
+      color: var(--c-button-warning-text);
   }
 
   &.badge--danger {
-      @include colorselect(background-color, $button-danger-bg);
-      @include colorselect(color, $button-danger-text);
+      background-color: var(--c-button-danger-bg);
+      color: var(--c-button-danger-text);
   }
 
   &.badge--rounded {
