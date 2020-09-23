@@ -3,8 +3,8 @@ th {
 }
 table {
   width: 100%;
-  @include colorselect(background-color, $c-table-bg);
-  @include colorselect(color, $c-table-text);
+  background-color: var(--table-bg);
+  color: var(--table-text);
   vertical-align: top;
   border: 0;
   border-spacing: 0;
@@ -13,7 +13,7 @@ table {
 
     tr {
       &:nth-of-type(odd) {
-        @include colorselect(background-color, $c-table-alternate-bg);
+        background-color: var(--table-alternate-bg);
       }
     }
   }
