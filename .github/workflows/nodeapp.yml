@@ -1,15 +1,6 @@
 name: NPM package
 
-on:
-  pull_request:
-    branches:
-      - master
-      - preview
-      - develop
-  push:
-    branches-ignore:
-      - master
-      - preview
+on: [push, pull_request]
 
 jobs:
   build:
