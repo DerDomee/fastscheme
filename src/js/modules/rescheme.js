@@ -2,12 +2,12 @@ import { set_cookie, get_cookie } from './../utils/cookie'
 import { isDomElement } from './../utils/domutils'
 
 
-const SCHEME_COOKIE_NAME = "fs_theme"
+const SCHEME_COOKIE_NAME = 'fs_theme'
 const DEFAULT_THEMES = [
-  {name: "Use system preference (@prefers-color-scheme)", class: ""},
-  {name: "Light Theme", class: "force-theme-light"},
-  {name: "Dark Theme", class: "force-theme-dark"},
-  {name: "Black Theme", class: "force-theme-darkest"}]
+  {name: 'Use system preference (@prefers-color-scheme)', class: ''},
+  {name: 'Light Theme', class: 'force-theme-light'},
+  {name: 'Dark Theme', class: 'force-theme-dark'},
+  {name: 'Black Theme', class: 'force-theme-darkest'}]
 
 /**
   * Rescheme Class providing the selector for scheme-overrides.
@@ -29,7 +29,7 @@ class Rescheme {
   constructor(arg1, arg2) {
     const element = arg1, config = arg2
     if(element === null || ! isDomElement(element)) {
-      throw new Error("IllegalArgument - arg1 is not a DOM element")
+      throw new Error('IllegalArgument - arg1 is not a DOM element')
     }
     if(config === null) {
       this._setupDefaultSelector(element)
@@ -43,30 +43,24 @@ class Rescheme {
     var themecookie = get_cookie(SCHEME_COOKIE_NAME)
     var selectorwrapper = document.createElement('div')
     selectorwrapper.className = (selectorwrapper.className
-                                 + " select__wrapper").trim()
+                                 + ' select__wrapper').trim()
     var selector = document.createElement('select')
     element.appendChild(selectorwrapper)
     selectorwrapper.appendChild(selector)
     DEFAULT_THEMES.forEach(function(theme) {
       var option = document.createElement('option')
       if(theme.class === themecookie) {
-        option.setAttribute("selected", 1)
+        option.setAttribute('selected', 1)
       }
       option.appendChild(document.createTextNode(theme.name))
       option.setAttribute('theme-class', theme.class)
       selector.appendChild(option)
     })
-    selector.addEventListener("change", () => {
+    selector.addEventListener('change', () => {
       var selIndex = selector.options[selector.selectedIndex]
       var indexClass = selIndex.getAttribute('theme-class')
       Rescheme.changeTheme(indexClass)
     })
-  }
-
-  _setupWithConfiguration(arg1, arg2) {
-    const element = arg1, config = arg2
-    throw new Error("_setupWithConfiguration is not supported " +
-                    "in this Version yet!");
   }
 
   /**
@@ -75,9 +69,9 @@ class Rescheme {
   static _startThemeChangeTransition() {
     document.querySelectorAll('*').forEach(function(node) {
       var classes = node.className
-      var clist = classes.split(" ")
-      clist.push("theme-scheme-animate")
-      node.className = clist.join(" ").trim()
+      var clist = classes.split(' ')
+      clist.push('theme-scheme-animate')
+      node.className = clist.join(' ').trim()
     })
   }
 
@@ -87,11 +81,11 @@ class Rescheme {
   static _stopThemeChangeTransition() {
     document.querySelectorAll('*').forEach(function(node) {
       var classes = node.className
-      var animationClassName = "theme-scheme-animate"
-      var clist = classes.split(" ").filter(function (c) {
+      var animationClassName = 'theme-scheme-animate'
+      var clist = classes.split(' ').filter(function (c) {
         return c.lastIndexOf(animationClassName, 0) !== 0
       })
-      node.className = clist.join(" ").trim()
+      node.className = clist.join(' ').trim()
     })
   }
 
@@ -100,20 +94,20 @@ class Rescheme {
     */
   static _setThemeClass(node, newtheme) {
     var classes = node.className
-    var classprefix = "force-theme"
-    var clist = classes.split(" ").filter(function (c) {
+    var classprefix = 'force-theme'
+    var clist = classes.split(' ').filter(function (c) {
       return c.lastIndexOf(classprefix, 0) !== 0
     })
     clist.push(newtheme)
-    node.className = clist.join(" ").trim()
+    node.className = clist.join(' ').trim()
   }
 
   /**
     * Helper function for `changeTheme`
     */
   static _setThemeCookie(themeName) {
-    if(themeName === "" || themeName === null) {
-      set_cookie(SCHEME_COOKIE_NAME, "", -1000)
+    if(themeName === '' || themeName === null) {
+      set_cookie(SCHEME_COOKIE_NAME, '', -1000)
     } else {
       set_cookie(SCHEME_COOKIE_NAME, themeName, 1000)
     }
@@ -143,13 +137,13 @@ class Rescheme {
 }
 
 
-var _defaultdomelement = document.querySelectorAll("scheme-select")[0]
+var _defaultdomelement = document.querySelectorAll('scheme-select')[0]
 new Rescheme(_defaultdomelement, null)
-document.addEventListener("DOMContentLoaded", function() {
+document.addEventListener('DOMContentLoaded', function() {
   var themecookie = get_cookie(SCHEME_COOKIE_NAME)
-  if (themecookie !== "" &&
+  if (themecookie !== '' &&
       themecookie !== null &&
-      themecookie.startsWith("force-theme-")) {
+      themecookie.startsWith('force-theme-')) {
     Rescheme.changeTheme(themecookie, false, false)
   }
 })
