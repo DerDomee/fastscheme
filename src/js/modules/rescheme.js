@@ -1,8 +1,7 @@
-import { set_cookie, get_cookie } from './../utils/cookie'
 import { isDomElement } from './../utils/domutils'
 
 
-const SCHEME_COOKIE_NAME = 'fs_theme'
+const SCHEME_LOCALSTORAGE_KEY = 'fs_theme'
 const DEFAULT_THEMES = [
   {name: 'Use system preference (@prefers-color-scheme)', class: ''},
   {name: 'Light Theme', class: 'force-theme-light'},
@@ -40,7 +39,7 @@ class Rescheme {
 
   _setupDefaultSelector(arg1) {
     const element = arg1
-    var themecookie = get_cookie(SCHEME_COOKIE_NAME)
+    var currentscheme = localStorage.getItem(SCHEME_LOCALSTORAGE_KEY)
     var selectorwrapper = document.createElement('div')
     selectorwrapper.className = (selectorwrapper.className
                                  + ' select__wrapper').trim()
@@ -49,7 +48,7 @@ class Rescheme {
     selectorwrapper.appendChild(selector)
     DEFAULT_THEMES.forEach(function(theme) {
       var option = document.createElement('option')
-      if(theme.class === themecookie) {
+      if(theme.class === currentscheme) {
         option.setAttribute('selected', 1)
       }
       option.appendChild(document.createTextNode(theme.name))
@@ -105,11 +104,11 @@ class Rescheme {
   /**
     * Helper function for `changeTheme`
     */
-  static _setThemeCookie(themeName) {
+  static _saveThemeLocalStorage(themeName) {
     if(themeName === '' || themeName === null) {
-      set_cookie(SCHEME_COOKIE_NAME, '', -1000)
+      localStorage.removeItem(SCHEME_LOCALSTORAGE_KEY)
     } else {
-      set_cookie(SCHEME_COOKIE_NAME, themeName, 1000)
+      localStorage.setItem(SCHEME_LOCALSTORAGE_KEY, themeName, 1000)
     }
   }
 
@@ -119,18 +118,18 @@ class Rescheme {
     * then add none or one new 'force-theme-*' class to toggle a theme.
     *
     * @param {string} arg1 newtheme: Name of the new theme-class to add. Use null or empty string to reset the theme.
-    * @param {boolean} arg2 usecookie: If the scheme change should be saved in a persistent cookie that loads the selected scheme on page reload
+    * @param {boolean} arg2 saveLocal: If the scheme change should be saved in localStorage that loads the selected scheme on page reload
     * @param {boolean} arg3 animatetransition: If the transition should be animated
     */
   static changeTheme(arg1, arg2 = true, arg3 = true) {
-    const newtheme = arg1, usecookie = arg2, animatetransition = arg3
+    const newscheme = arg1, saveLocal = arg2, animatetransition = arg3
 
     if(animatetransition) Rescheme._startThemeChangeTransition()
 
     var rootnode = document.querySelector(':root')
-    Rescheme._setThemeClass(rootnode, newtheme)
+    Rescheme._setThemeClass(rootnode, newscheme)
 
-    if (usecookie) Rescheme._setThemeCookie(newtheme)
+    if (saveLocal) Rescheme._saveThemeLocalStorage(newscheme)
 
     if(animatetransition) setTimeout(Rescheme._stopThemeChangeTransition, 500)
   }
@@ -140,11 +139,11 @@ class Rescheme {
 var _defaultdomelement = document.querySelectorAll('scheme-select')[0]
 new Rescheme(_defaultdomelement, null)
 document.addEventListener('DOMContentLoaded', function() {
-  var themecookie = get_cookie(SCHEME_COOKIE_NAME)
-  if (themecookie !== '' &&
-      themecookie !== null &&
-      themecookie.startsWith('force-theme-')) {
-    Rescheme.changeTheme(themecookie, false, false)
+  var currentscheme = localStorage.getItem(SCHEME_LOCALSTORAGE_KEY)
+  if (currentscheme !== '' &&
+      currentscheme !== null &&
+      currentscheme.startsWith('force-theme-')) {
+    Rescheme.changeTheme(currentscheme, false, false)
   }
 })
 
