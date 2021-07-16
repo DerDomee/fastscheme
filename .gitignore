@@ -3,6 +3,7 @@
 /src/js/coverage/
 /dist/
 /.cache/
+package-lock.json
 
 # OS or Editor folders
 ._*
